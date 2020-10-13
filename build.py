@@ -7,10 +7,13 @@ base_dir = Path(__file__).parent
 
 
 async def packet_ui():
-    await asyncio.create_subprocess_shell(
-            'yarn run parcel build src/packet-ui.js')
-    await asyncio.create_subprocess_shell(
-            'yarn run sass src/:dist/')
+    proc = await asyncio.create_subprocess_shell(
+        'yarn run parcel build src/packet-ui.js')
+    await proc.communicate()
+
+    proc = await asyncio.create_subprocess_shell(
+        'yarn run sass src/:dist/')
+    await proc.communicate()
 
     src_dir = base_dir.joinpath('src/style')
     dest_dir = base_dir.joinpath('dist/style')
@@ -22,8 +25,9 @@ async def packet_ui():
 
 
 async def lib():
-    await asyncio.create_subprocess_shell(
+    proc = await asyncio.create_subprocess_shell(
         'yarn run parcel build node_modules/normalize.css/normalize.css')
+    await proc.communicate()
 
 
 async def font():

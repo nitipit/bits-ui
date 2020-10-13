@@ -1,0 +1,9 @@
+.*
+docs*
+node_modules
+venv
+.gitignore
+.npmignore
+build.py
+require.pip
+yarn.lock

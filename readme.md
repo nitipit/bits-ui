@@ -1,2 +1,2 @@
 # Packet UI
-## Simple and elegant web UI with Javascript and CSS
+## Simple and elegant HTML5 User Interface with Javascript and CSS
