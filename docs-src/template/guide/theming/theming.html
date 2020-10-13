@@ -1,0 +1,11 @@
+{% extends 'guide/_base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/bits-ui/static/template/guide/theming/theming.css?v={{_v}}">
+{% endblock %}
+
+{% block body %}
+<div class="container" style="margin-top: 2rem;">
+{{markdown('theming.md')}}
+</div>
+{% endblock %}

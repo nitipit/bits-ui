@@ -1,0 +1,34 @@
+@use '../_var';
+@use '../mixin';
+
+pkt-sidebar {
+    [el="wrapper"] {
+        width: 250px;
+    }
+    [el="title"] {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            text-decoration: none;
+        }
+        pkt-button-square {
+            font-size: 1.5rem;
+            border-radius: 0;
+            @include mixin.bg-int-color(var.$color-c);
+        }
+    }
+    [el="content"] {
+        padding-left: 0.5rem;
+        padding-bottom: 5rem;
+        .h {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+    }
+}
