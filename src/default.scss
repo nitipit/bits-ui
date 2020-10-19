@@ -1,8 +1,9 @@
+@use 'style/_var';
 @use 'style/_mixin';
 @use "style/_ui";
 
 pkt-badge, .pkt-badge {
-    @include ui.badge();
+    @include ui.badge($bg-color: var.$color-p);
 }
 
 pkt-box-arrow-top, .pkt-box-arrow-top {
@@ -25,115 +26,115 @@ button, .button, input[type="button"] {
     @include ui.button();
 }
 
-pkt-button-pin, .pkt-button-pin {
-    @include ui.button-pin();
-}
+// pkt-button-pin, .pkt-button-pin {
+//     @include ui.button-pin();
+// }
 
-pkt-button-square, .pkt-button-square {
-    @include ui.button-square();
-}
+// pkt-button-square, .pkt-button-square {
+//     @include ui.button-square();
+// }
 
-pkt-button-group, .pkt-button-group {
-    @include ui.button-group();
-}
+// pkt-button-group, .pkt-button-group {
+//     @include ui.button-group();
+// }
 
-pkt-card, .pkt-card {
-    @include ui.card();
-}
+// pkt-card, .pkt-card {
+//     @include ui.card();
+// }
 
-pkt-checkbox {
-    @include ui.checkbox();
-}
+// pkt-checkbox {
+//     @include ui.checkbox();
+// }
 
-pkt-file {
-    @include ui.file();
-}
+// pkt-file {
+//     @include ui.file();
+// }
 
-pkt-icon {
-    @include ui.icon();
-}
+// pkt-icon {
+//     @include ui.icon();
+// }
 
-input {
-    @include ui.input-text();
-    &[type="text"], &[type="password"], &[type="email"] {
-        @include ui.input-text();
-    }
-}
+// input {
+//     @include ui.input-text();
+//     &[type="text"], &[type="password"], &[type="email"] {
+//         @include ui.input-text();
+//     }
+// }
 
-input[type="range"] {
-    @include ui.slider();
-}
+// input[type="range"] {
+//     @include ui.slider();
+// }
 
-pkt-input-number {
-    @include ui.input-number();
-}
+// pkt-input-number {
+//     @include ui.input-number();
+// }
 
-pkt-input-radio {
-    @include ui.input-radio();
-}
+// pkt-input-radio {
+//     @include ui.input-radio();
+// }
 
-pkt-input-radio-btn, .pkt-input-radio-btn {
-    @include ui.input-radio-btn();
-}
+// pkt-input-radio-btn, .pkt-input-radio-btn {
+//     @include ui.input-radio-btn();
+// }
 
-pkt-input-tag {
-    @include ui.input-tag();
-}
+// pkt-input-tag {
+//     @include ui.input-tag();
+// }
 
-label {
-    @include mixin.font-ui();
-}
+// label {
+//     @include mixin.font-ui();
+// }
 
-pkt-menu > ul {
-    @include ui.menu();
-}
+// pkt-menu > ul {
+//     @include ui.menu();
+// }
 
-div.pkt-path {
-    @include ui.path();
-}
+// div.pkt-path {
+//     @include ui.path();
+// }
 
-// progress
-pkt-dotpulse {
-    @include ui.dotpulse();
-}
+// // progress
+// pkt-dotpulse {
+//     @include ui.dotpulse();
+// }
 
-pkt-progress-bar {
-    @include ui.progress-bar();
-}
+// pkt-progress-bar {
+//     @include ui.progress-bar();
+// }
 
-pkt-spinner {
-    @include ui.spinner();
-}
-// end : progress
+// pkt-spinner {
+//     @include ui.spinner();
+// }
+// // end : progress
 
-pkt-sidebar {
-    @include ui.sidebar();
-}
+// pkt-sidebar {
+//     @include ui.sidebar();
+// }
 
-pkt-slide {
-    @include ui.slide();
-}
+// pkt-slide {
+//     @include ui.slide();
+// }
 
-pkt-switch {
-    @include ui.switch();
-}
+// pkt-switch {
+//     @include ui.switch();
+// }
 
-pkt-tab, .pkt-tab {
-    @include ui.tab();
-}
+// pkt-tab, .pkt-tab {
+//     @include ui.tab();
+// }
 
-table {
-    @include ui.table();
-}
+// table {
+//     @include ui.table();
+// }
 
-pkt-tag, .pkt-tag {
-    @include ui.tag();
-}
+// pkt-tag, .pkt-tag {
+//     @include ui.tag();
+// }
 
-pkt-tag-x {
-    @include ui.tag();
-    padding-right: 0.2em;
-    pkt-icon {
-        cursor: pointer;
-    }
-}
+// pkt-tag-x {
+//     @include ui.tag();
+//     padding-right: 0.2em;
+//     pkt-icon {
+//         cursor: pointer;
+//     }
+// }

@@ -1,9 +1,8 @@
-@use '../_var';
 @use '../_mixin';
 
 @mixin button(
-        $bg-color: var.$ui-color,
-        $radius: var.$border-radius) {
+        $bg-color: orange,
+        $radius: 4px) {
     @include mixin.font-ui();
     @include mixin.lift-1();
     @include mixin.bg-int-color($bg-color);
@@ -37,7 +36,7 @@
     }
 }
 
-@mixin button-pin($bg-color: var.$ui-color) {
+@mixin button-pin($bg-color: orange) {
     @include button($bg-color);
     border-radius: 50%;
     width: 2em;
@@ -56,7 +55,7 @@
     }
 }
 
-@mixin button-square($bg-color: var.$ui-color) {
+@mixin button-square($bg-color: orange) {
     @include button($bg-color);
     width: 2em;
     height: 2em;
