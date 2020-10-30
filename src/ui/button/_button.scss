@@ -1,7 +1,8 @@
+@use '../_var';
 @use '../_mixin';
 
 @mixin button(
-        $bg-color: orange,
+        $bg-color: var.$ui-color,
         $radius: 4px) {
     @include mixin.font-ui();
     @include mixin.lift-1();
