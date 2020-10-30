@@ -1,0 +1,20 @@
+{% extends 'guide/_base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/bits-ui/static/template/guide/icon/adwaita.css?v={{_v}}">
+{% endblock %}
+
+{% block body %}
+<div class="container" style="margin-top: 2rem;">
+    <h1 style="margin: 0 auto 1rem 0; border: 0; text-align: center;">Icon Systems</h1>
+    <h1>Adwaita Icons</h1>
+    <div id="icons" class="flex" style="margin-top: 2rem;">
+    {% for icon in icons %}
+        <div class="icon" id="{{icon}}">
+            <bits-icon theme="adwaita" name="{{icon}}"></bits-icon>
+            <span>{{icon}}</span>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}

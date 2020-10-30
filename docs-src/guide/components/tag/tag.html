@@ -1,0 +1,11 @@
+{% extends 'guide/_base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/bits-ui/static/template/guide/components/tag/tag.css?v={{_v}}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+{{ markdown('tag.md') }}
+</div>
+{% endblock %}

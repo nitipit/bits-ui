@@ -1,0 +1,19 @@
+{% extends 'guide/_base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/bits-ui/static/template/guide/components/sidebar/sidebar.css?v={{_v}}">
+<script>
+window.addEventListener('load', function(){
+    var sidebar_btn = document.querySelector('#preview [data-id="menu"]');
+    sidebar_btn.addEventListener('click', function(){
+        sidebar.show_sidebar();
+    })
+})
+</script>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+{{ markdown('sidebar.md') }}
+</div>
+{% endblock %}
