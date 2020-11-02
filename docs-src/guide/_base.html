@@ -1,20 +1,10 @@
-<html>
-<head>
-{% set _v = 25 %}
-{% block title %}
-<title>Packet UI Guide</title>
+{% extends '_base.html' %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{to_root}}guide/base.css?v={{_v}}">
+<link rel="stylesheet" href="{{to_root}}guide/sidebar.css?v={{_v}}">
 {% endblock %}
-{% set root_relative = '../../' %}
-{% include '_head.html' %}
-<link rel="stylesheet" href="{{root_relative}}guide/base.css?v={{_v}}"
-<link rel="stylesheet" href="{{root_relative}}guide/sidebar.css?v={{_v}}">
-</head>
-<body>
-{% include 'guide/_sidebar.html' %}
+
 {% block body %}
+{% include 'guide/_sidebar.html' %}
 {% endblock %}
-{% block footer %}
-<div style="margin-top: 10rem;"></div>
-{% endblock %}
-</body>
-</html>

@@ -25,6 +25,13 @@ class Docs:
             dirs_exist_ok=True,
         )
 
+        # Copy highlight.js
+        shutil.copytree(
+            self.base_dir.joinpath('node_modules/highlight.js'),
+            self.docs_dir.joinpath('static/lib/highlight.js'),
+            dirs_exist_ok=True,
+        )
+
     async def build(self):
         self._copy_lib()
         proc = await asyncio.create_subprocess_shell(
@@ -49,8 +56,10 @@ async def main():
     )
     arg_parser = argparse.ArgumentParser(description="Packet UI Documentation")
     arg_parser.add_argument('--dev', action='store_true')
-    arg_parser.add_argument('src', help="source diretory")
-    arg_parser.add_argument('dest', nargs='?', default='docs', help="destination directory")
+    arg_parser.add_argument(
+        'src', nargs='?', default="docs-src", help="source directory")
+    arg_parser.add_argument(
+        'dest', nargs='?', default='docs', help="destination directory")
     args = arg_parser.parse_args()
     if args.dev is True:
         await docs.dev()
