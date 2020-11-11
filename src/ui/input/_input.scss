@@ -2,7 +2,6 @@
 @use '../_var';
 @use '../_mixin';
 
-// @mixin slider-thumb($thumb-color=lighten(grey, 80%))
 @mixin slider-thumb($thumb-color: color.adjust(var.$grey, $lightness: 80%)) {
     appearance: none;
     width: 1.2em;
@@ -45,13 +44,16 @@
     }
 
 }
-@mixin input-text() {
+@mixin input-text(
+        $border-color: var.$grey,
+        $border-radius: var.$border-radius,
+        $outline-color: var.$ui-color) {
     @include mixin.font-ui();
-    border: 1px solid var.$grey;
-    border-radius: var.$border-radius;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
     padding: 0.4em;
     &:focus {
         @include mixin.lift-1();
-        outline-color: var.$ui-color;
+        outline-color: $outline-color;
     }
 }

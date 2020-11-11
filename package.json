@@ -1,6 +1,6 @@
 {
   "name": "packet-ui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Simple and elegant HTML5 UI with Javascript and CSS",
   "repository": "git@github.com:nitipit/packet-ui.git",
   "author": "Nitipit Nontasuwan <nitipit@gmail.com>",
@@ -13,6 +13,5 @@
     "parcel": "^2.0.0-beta.1",
     "sass": "^1.26.11",
     "siema": "^1.5.1"
-  },
-  "main": "src/packet-ui.js"
+  }
 }

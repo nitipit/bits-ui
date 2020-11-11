@@ -4,10 +4,9 @@
 {% block title %}
 <title>Packet UI</title>
 {% endblock %}
-
-{% set root_relative = './' %}
 {% include '_head.html' %}
-
+<link rel="stylesheet" href="{{to_root}}base.css?v={{_v}}">
+<script defer src="{{to_root}}base.js"></script>
 {% block head %}
 {% endblock %}
 </head>

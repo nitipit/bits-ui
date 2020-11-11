@@ -1,24 +1,35 @@
+@use 'style/_var';
 @use 'style/_mixin';
-@use "style/_ui";
+@use "ui/_ui";
 
 pkt-badge, .pkt-badge {
-    @include ui.badge();
+    @include ui.badge($bg-color: var.$ui-color)
 }
 
 pkt-box-arrow-top, .pkt-box-arrow-top {
-    @include ui.box-arrow($arrow: "top");
+    @include ui.box-arrow(
+        $arrow: "top",
+        $radius: var.$border-radius
+    );
 }
 
 pkt-box-arrow-right, .pkt-box-arrow-right {
-    @include ui.box-arrow($arrow: "right");
+    @include ui.box-arrow(
+        $arrow: "right",
+        $radius: var.$border-radius
+    );
 }
 
 pkt-box-arrow-bottom, .pkt-box-arrow-bottom {
-    @include ui.box-arrow($arrow: "bottom");
+    @include ui.box-arrow(
+        $arrow: "bottom",
+        $radius: var.$border-radius);
 }
 
 pkt-box-arrow-left, .pkt-box-arrow-left {
-    @include ui.box-arrow($arrow: "left");
+    @include ui.box-arrow(
+        $arrow: "left",
+        $radius: var.$border-radius);
 }
 
 button, .button, input[type="button"] {

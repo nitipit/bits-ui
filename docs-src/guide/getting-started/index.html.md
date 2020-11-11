@@ -1,4 +1,7 @@
-## Basic Set Up
+## Set Up
+---
+
+### CDN
 
 To use default style and color, just put codes below in html `<head>` and you're good to go.
 
@@ -21,6 +24,12 @@ To use default style and color, just put codes below in html `<head>` and you're
     }
     </style>
 </head>
+```
+
+### Install by NPM
+
+```
+npm install packet-ui
 ```
 
 <h2 id="usage">Usage</h2>
