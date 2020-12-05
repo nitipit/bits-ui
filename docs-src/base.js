@@ -1,3 +1,5 @@
+import '../dist/packet-ui.js';
+
 import hljs from 'highlight.js/lib/core.js';
 import xml from 'highlight.js/lib/languages/xml.js';
 import javascript from 'highlight.js/lib/languages/javascript.js';
