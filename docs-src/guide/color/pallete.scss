@@ -1,0 +1,17 @@
+@use '../../_mixin';
+@use '../../_var';
+@use '../../_ui';
+
+#pallete {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        > div {
+            display: block;
+            width: 100%;
+            height: 0.7rem;
+        }
+    }
+}

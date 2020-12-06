@@ -121,10 +121,6 @@ pkt-sidebar {
     @include ui.sidebar();
 }
 
-pkt-slide {
-    @include ui.slide();
-}
-
 pkt-switch {
     @include ui.switch();
 }
