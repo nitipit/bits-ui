@@ -1,6 +1,6 @@
 <h1 style="text-align: center; border: 0; margin-top: 0;">Color System</h1>
 <div style="text-align: center; font-size: 5rem;">
-    <icon theme="adwaita" name="preferences-color"></icon>
+    <pkt-icon set="adwaita" name="preferences-color"></pkt-icon>
 </div>
 
 # Pallete

@@ -41,6 +41,7 @@ code {
     background-color: #282c34;
     color: color.adjust(white, $lightness: -10%);
     border-radius: 4px;
+    vertical-align: middle;
 }
 
 code.hljs {
