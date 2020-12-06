@@ -1,14 +1,13 @@
 import {html, render} from 'lit-html';
-import Color from 'color';
 
 export class TagX extends HTMLElement {
     constructor() {
         super()
         this.template = (text) => html`
             <span>${text}</span>
-            <pkt-icon theme="adwaita" name="window-close"
-                @click=${( () => {this.remove()} )}
-            ></pkt-icon>
+            <pkt-icon set="adwaita" name="window-close"
+                @click=${( () => {this.remove()} )}>
+            </pkt-icon>
         `
     }
 

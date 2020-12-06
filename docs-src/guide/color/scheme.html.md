@@ -1,10 +1,10 @@
 <h1 style="text-align: center; border: 0; margin-top: 0;">Color System</h1>
 <div style="text-align: center; font-size: 5rem;">
-    <bits-icon theme="adwaita" name="preferences-color"></bits-icon>
+    <pkt-icon set="adwaita" name="preferences-color"></pkt-icon>
 </div>
 
 # Scheme and UI Class
-Bits UI generates color scheme from primary color (analog, triadic, complement
+Packet UI generates color scheme from primary color (analog, triadic, complement
 and monochrome). The default primary color is <span class="pkt-tag">amber</span>
 
 To use analog and triadic color
