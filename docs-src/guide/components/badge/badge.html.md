@@ -1,6 +1,7 @@
 # Badge
 
 ## Preview
+---
 <div id="preview">
     <div class="size-1">
         <pkt-badge class="bg-a1">1</pkt-badge>

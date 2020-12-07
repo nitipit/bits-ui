@@ -1,6 +1,7 @@
 <h1 style="border: 0; margin: 0; text-align: center;">Box Arrow</h1>
 
 ## Preview
+---
 <div id="preview">
     <div>
         <span class="pkt-box-arrow top">Arrow Top</span>
@@ -16,7 +17,7 @@
 </div>
 
 ## Usage
-
+---
 ```html
 <span class="pkt-box-arrow-top">Arrow Top</span>
 <span class="pkt-box-arrow-right">Arrow Right</span>
@@ -24,15 +25,20 @@
 <span class="pkt-box-arrow-left">Arrow Left</span>
 ```
 
-## Stylus
-```stylus
-box-arrow(
-    $arrow: top, // top, right, bottom, left
+## SCSS
+---
+```scss
+@use 'sass:color';
+@use 'path/to/_ui.scss';
+
+@include ui.box-arrow(
+    $arrow: top,
     $arrow-size: 7px,
     $position: 50%,
-    $bg-color: lighten(grey, 80%), // Any color function/value.
+    $bg-color: color.adjust(white, $lightness: -20%),
     $border-width: 1px,
-    $border-color: black)
+    $border-color: black,
+    $radius: var.$border-radius)
 ```
 
 |Argument|Description|Example value|
@@ -40,6 +46,6 @@ box-arrow(
 |`$arrow`|Arrow position and direction : `top`, `right`, `bottom`, `left`|`top`|
 |`$arrow-size`|Arrow size apply to width & height : can be any CSS size unit|`7px` `2em`|
 |`$position`|Arrow position : any css size unit |`50%` `10px`|
-|`$bg-color`|Background color, value can be any color supported by **Color System**, **Stylus** or **CSS**|`red` `$color-c`|
+|`$bg-color`|Background color|`orange`|
 |`$border-width`|Border width|`1px` `2px`|
-|`$border-color`|Border color|`red` `$color-p`|
+|`$border-color`|Border color|`red`|

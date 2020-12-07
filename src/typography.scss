@@ -34,6 +34,5 @@ code {
 
 hr {
     border: none;
-    height: 2;
-    background-color: color.adjust(black, $lightness: 20%);
+    border-top: 1px solid color.adjust(black, $lightness: 20%);
 }
