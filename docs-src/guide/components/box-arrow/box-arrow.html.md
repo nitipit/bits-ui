@@ -44,8 +44,8 @@
 |Argument|Description|Example value|
 |---|---|---|
 |`$arrow`|Arrow position and direction : `top`, `right`, `bottom`, `left`|`top`|
-|`$arrow-size`|Arrow size apply to width & height : can be any CSS size unit|`7px` `2em`|
-|`$position`|Arrow position : any css size unit |`50%` `10px`|
+|`$arrow-size`|Arrow size apply to width & height|`7px` `2em`|
+|`$position`|Arrow position|`50%` `10px`|
 |`$bg-color`|Background color|`orange`|
 |`$border-width`|Border width|`1px` `2px`|
 |`$border-color`|Border color|`red`|
