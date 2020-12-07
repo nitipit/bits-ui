@@ -1,30 +1,30 @@
 <h1 style="border: 0; margin: 0; text-align: center;">Box Arrow</h1>
 
-# Preview
+## Preview
 <div id="preview">
     <div>
-        <span class="bits-box-arrow top">Arrow Top</span>
-        <span class="bits-box-arrow right">Arrow Right</span>
-        <span class="bits-box-arrow bottom">Arrow Bottom</span>
-        <span class="bits-box-arrow left">Arrow Left</span>
+        <span class="pkt-box-arrow top">Arrow Top</span>
+        <span class="pkt-box-arrow right">Arrow Right</span>
+        <span class="pkt-box-arrow bottom">Arrow Bottom</span>
+        <span class="pkt-box-arrow left">Arrow Left</span>
     </div>
     <div>
-        <p class="bits-box-arrow top">
+        <p class="pkt-box-arrow top">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </p>
     </div>
 </div>
 
-# Usage
+## Usage
 
 ```html
-<span class="bits-box-arrow-top">Arrow Top</span>
-<span class="bits-box-arrow-right">Arrow Right</span>
-<span class="bits-box-arrow-bottom">Arrow Bottom</span>
-<span class="bits-box-arrow-left">Arrow Left</span>
+<span class="pkt-box-arrow-top">Arrow Top</span>
+<span class="pkt-box-arrow-right">Arrow Right</span>
+<span class="pkt-box-arrow-bottom">Arrow Bottom</span>
+<span class="pkt-box-arrow-left">Arrow Left</span>
 ```
 
-# Stylus
+## Stylus
 ```stylus
 box-arrow(
     $arrow: top, // top, right, bottom, left

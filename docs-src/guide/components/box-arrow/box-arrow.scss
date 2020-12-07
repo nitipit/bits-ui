@@ -1,0 +1,43 @@
+@use '../../../var';
+@use '../../../ui';
+
+#preview {
+    > div {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .pkt-box-arrow {
+        padding: 0.5rem;
+        margin: 0.5rem;
+        &.top {
+            @include ui.box-arrow(
+                $arrow: top,
+                $bg-color: var.$color-a1);
+        };
+        &.right {
+            @include ui.box-arrow(
+                $arrow: right,
+                $bg-color: var.$color-p);
+        };
+        &.bottom {
+            @include ui.box-arrow(
+                $arrow: bottom,
+                $bg-color: var.$color-a2);
+        }
+        &.left {
+            @include ui.box-arrow(
+                $arrow: left,
+                $bg-color: var.$color-t1);
+        }
+    }
+    p.pkt-box-arrow.top {
+        padding: 1rem;
+        margin: 0.5rem;
+        margin-top: 2rem;
+        @include ui.box-arrow(
+            $arrow: top,
+            $bg-color: white,
+            $arrow-size: 20px)
+    }
+}

@@ -1,16 +1,11 @@
-<h1 style="text-align: center; border: 0; margin-top: 0;">Color System</h1>
-<div style="text-align: center; font-size: 5rem;">
-    <pkt-icon set="adwaita" name="preferences-color"></pkt-icon>
-</div>
-
-# Scheme and UI Class
+# Color Scheme
 Packet UI generates color scheme from primary color (analog, triadic, complement
 and monochrome). The default primary color is <span class="pkt-tag">amber</span>
 
-To use analog and triadic color
-- Apply class `color-{p, a1, a2, c, t1, t2}` for font and icon color
-- Apply class `bg-{p, a1, a2, c, t1, t2}` for background
-- Apply class `bg-int-{p, a1, a2, c, t1, t2}` for interactive background color `(hover and active)`.
+To use analog and triadic color:
+- Apply class `color-{p, a1, a2, c, t1, t2}` for font and icon color.
+- Apply class `bg-{p, a1, a2, c, t1, t2}` for background.
+- Apply class `bg-int-{p, a1, a2, c, t1, t2}` for interactive background color.
 
 Analog and Triadic color:
 <div class="flex">
@@ -77,4 +72,3 @@ Monochrome for primary color):
 
 # Change Primary Color ?
 The primary color can be changed by using `node_modules/packet-ui/src/style/_var.scss`.
-See color customization for more details.

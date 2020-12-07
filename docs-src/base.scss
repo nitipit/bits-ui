@@ -30,6 +30,17 @@ a {color: inherit;}
     max-width: 800px;
     width: 90%;
     margin: auto;
+
+    h1 {
+        text-align: center;
+        padding-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        margin-top: 2rem;
+        margin-bottom: 0;
+    }
 }
 
 .row {
@@ -46,11 +57,4 @@ code {
 
 code.hljs {
     border-radius: 5px;
-}
-
-#sidebar-button {
-    position: fixed;
-    top: 1.5rem;
-    left: 1.5rem;
-    font-size: 1.25rem;
 }

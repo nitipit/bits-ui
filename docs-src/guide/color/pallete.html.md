@@ -1,8 +1,3 @@
-<h1 style="text-align: center; border: 0; margin-top: 0;">Color System</h1>
-<div style="text-align: center; font-size: 5rem;">
-    <pkt-icon set="adwaita" name="preferences-color"></pkt-icon>
-</div>
-
 # Pallete
 
 <div id="pallete" style="margin: 2rem 0;">
@@ -38,20 +33,45 @@
     </div>
 </div>
 
-Bits UI has 19 predefined color pallete from Material Design.
+Packet UI provides 19 predefined color pallete from Material Design.
 
-> red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey
+<div id="badge">
+    <pkt-badge class="bg-red">red</pkt-badge>
+    <pkt-badge class="bg-pink">pink</pkt-badge>
+    <pkt-badge class="bg-purple">purple</pkt-badge>
+    <pkt-badge class="bg-deep-purple">deep-purple</pkt-badge>
+    <pkt-badge class="bg-indigo">indigo</pkt-badge>
+    <pkt-badge class="bg-blue">blue</pkt-badge>
+    <pkt-badge class="bg-light-blue">light-blue</pkt-badge>
+    <pkt-badge class="bg-cyan">cyan</pkt-badge>
+    <pkt-badge class="bg-teal">teal</pkt-badge>
+    <pkt-badge class="bg-green">green</pkt-badge>
+    <pkt-badge class="bg-light-green">light-green</pkt-badge>
+    <pkt-badge class="bg-lime">lime</pkt-badge>
+    <pkt-badge class="bg-yellow">yellow</pkt-badge>
+    <pkt-badge class="bg-amber">amber</pkt-badge>
+    <pkt-badge class="bg-orange">orange</pkt-badge>
+    <pkt-badge class="bg-deep-orange">deep-orange</pkt-badge>
+    <pkt-badge class="bg-brown">brown</pkt-badge>
+    <pkt-badge class="bg-grey">grey</pkt-badge>
+    <pkt-badge class="bg-blue-grey">blue-grey</pkt-badge>
+</div>
 
-To use color pallet, just apply `class="{color}"` for text color and `class="bg-int-{color}"` for background color.
+To use color pallete, just apply predefined css class following.
+- `class="{color}"` for text color.
+- `class="{bg-color}"` for background color.
+- `class="{bg-int-color}"` for interactive background color.
+
 For example:
 
-<tag class="bg-int-indigo">Hello</tag>
-<span class="indigo">I'm Indigo</span>
+<span class="indigo">indigo</span>
+<pkt-tag class="bg-red">bg-red</pkt-tag>
+<pkt-tag class="bg-int-purple">bg-int-purple</pkt-tag>
 
 ```html
-<tag class="bg-int-indigo">Hello</tag>
-<!-- bg-int-indigo is dark shade. Text color will become white. -->
-<span class="indigo">I'm indigo</span>
+<span class="indigo">indigo</span>
+<pkt-tag class="bg-red">bg-red</pkt-tag>
+<pkt-tag class="bg-int-purple">bg-int-purple</pkt-tag>
 ```
 
-> `class="bg-int-{color}"` also apply css white/black font color depends on background's hue and lightness for readability.
+> text color will change between black/white depends on background color.

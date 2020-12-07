@@ -1,0 +1,31 @@
+@use '../../../var';
+
+#preview {
+    > div {
+        display: flex;
+        justify-content: center;
+        pkt-badge {
+            margin: 0.5rem;
+        }
+    }
+    .size-1 {
+        font-size: 0.8rem;
+    }
+    .size-2 {
+        font-size: 1.4rem;
+    }
+    .size-3 {
+        font-size: 2.0rem;
+    }
+    @media #{var.$sm} {
+        .size-1 {
+            font-size: 0.6rem;
+        }
+        .size-2 {
+            font-size: 1rem;
+        }
+        .size-3 {
+            font-size: 1.4rem;
+        }
+    }
+}

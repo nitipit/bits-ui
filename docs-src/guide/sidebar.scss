@@ -1,9 +1,17 @@
 @use '../_var';
 @use '../mixin';
 
+#sidebar-button {
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 1.25rem;
+    z-index: 100;
+}
+
 pkt-sidebar {
     [el="wrapper"] {
-        width: 250px;
+        width: 260px;
     }
     [el="title"] {
         display: flex;
