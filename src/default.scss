@@ -60,10 +60,6 @@ pkt-file {
     @include ui.file();
 }
 
-pkt-icon {
-    @include ui.icon();
-}
-
 input {
     @include ui.input-text();
     &[type="text"], &[type="password"], &[type="email"] {

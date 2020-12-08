@@ -49,8 +49,16 @@ class PacketUI:
         )
 
 
+def lib(base_dir: Path):
+    src_dir = base_dir.joinpath('node_modules/adwaita-icon-web/dist/')
+    dest_dir = base_dir.joinpath('dist/adwaita-icon-web/')
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copytree(src_dir, dest_dir, dirs_exist_ok=True)
+
+
 async def main():
     base_dir = Path(__file__).parent
+    lib(base_dir)
     packet_ui = PacketUI(
         src_dir=base_dir.joinpath('src'),
         dist_dir=base_dir.joinpath('dist'),

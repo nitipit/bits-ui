@@ -6,7 +6,6 @@
   "author": "Nitipit Nontasuwan <nitipit@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "adwaita-icon-web": "^1.0.2",
     "color": "^3.1.3",
     "highlight.js": "^10.2.0",
     "lit-html": "^1.3.0",

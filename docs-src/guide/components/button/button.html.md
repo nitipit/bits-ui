@@ -149,14 +149,6 @@ Grouping buttons together. Can apply to `button` and `pkt-button-square`
 </pkt-button-group>
 ```
 
-<div style="margin-top: 2rem;">
-    Group Button
-    <div class="pkt-button-group" style="display: inline-flex; width: 8rem; margin-left: 1rem;">
-        <button class="bg-int-a1">OK</button>
-        <button class="bg-int-white">Cancel</button>
-    </div>
-</div>
-
 ### SCSS
 ```scss
 @use 'path/to/_ui.scss';
