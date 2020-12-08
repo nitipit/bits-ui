@@ -1,4 +1,4 @@
-# Button
+# Buttons
 
 ## Preview
 ---
@@ -35,22 +35,54 @@
     </div>
 </div>
 
-## Usage
----
 
-### Button
+## Button
+---
 <button>Button</button>
 ```html
 <button>button</button>
 <a class="button">button</a>
 ```
-### Pin
+
+### SCSS
+```scss
+@use 'path/to/_ui.scss';
+
+button {
+    @include ui.button($bg-color: orange, $radius: 4px);
+}
+```
+
+|Argument|Description|Example value|
+|---|---|---|
+|`$bg-color`|Background color|`red`|
+|`$radius`|Border radius|`4px`|
+
+
+## Pin
+---
 <span class="pkt-button-pin">+</span>
 ```html
 <pkt-button-pin>+</pkt-button-pin>
 <a class="pkt-button-pin">+</a>
 ```
-### Square Button
+
+### SCSS
+```scss
+@use 'path/to/_ui.scss';
+
+pkt-button-pin {
+    @include ui.button-pin($bg-color: $ui-color);
+}
+```
+
+|Argument|Description|Example value|
+|---|---|---|
+|`$bg-color`|Background color|`red`|
+
+
+## Square Button
+---
 <span class="pkt-button-square">+</span>
 
 ```html
@@ -58,8 +90,22 @@
 <a class="pkt-button-square">+</a>
 ```
 
-### Group Button
-Grouping buttons together. Can apply on `button` and `pkt-button-square`
+### SCSS
+```scss
+@use 'path/to/_ui.scss';
+
+pkt-button-square {
+    @include ui.button-square($bg-color: $ui-color);
+}
+```
+
+|Argument|Description|Example value|
+|---|---|---|
+|`$bg-color`|Background color|`red`|
+
+## Group Button
+---
+Grouping buttons together. Can apply to `button` and `pkt-button-square`
 
 <div class="flex p">
     <pkt-button-group style="width: 10rem;">
@@ -103,50 +149,6 @@ Grouping buttons together. Can apply on `button` and `pkt-button-square`
 </pkt-button-group>
 ```
 
-## SCSS
----
-<div>
-    Button<button style="margin-left: 1rem;">button</button>
-</div>
-
-```scss
-@use 'path/to/_ui.scss';
-@include ui.button(
-    $bg-color: orange,
-    $radius: 4px)
-```
-
-|Argument|Description|Example value|
-|---|---|---|
-|`$bg-color`|Background color|`red`|
-|`$radius`|Border radius|`4px`|
-
-<div style="margin-top: 2rem;">
-    Button Pin<pkt-button-pin style="margin-left: 1rem;">+</pkt-button-pin>
-</div>
-
-```scss
-@use 'path/to/_ui.scss';
-@include button-pin($bg-color: $ui-color)
-```
-
-|Argument|Description|Example value|
-|---|---|---|
-|`$bg-color`|Background color|`red`|
-
-<div style="margin-top: 2rem;">
-    Square Button<pkt-button-square style="margin-left: 1rem;">+</pkt-button-square>
-</div>
-
-```scss
-@use 'path/to/_ui.scss';
-@include button-square($bg-color: $ui-color)
-```
-
-|Argument|Description|Example value|
-|---|---|---|
-|`$bg-color`|Background color|`red`|
-
 <div style="margin-top: 2rem;">
     Group Button
     <div class="pkt-button-group" style="display: inline-flex; width: 8rem; margin-left: 1rem;">
@@ -155,11 +157,15 @@ Grouping buttons together. Can apply on `button` and `pkt-button-square`
     </div>
 </div>
 
+### SCSS
 ```scss
 @use 'path/to/_ui.scss';
-button-gruop($radius: $border-radius)
+
+pkt-button-group {
+    @include ui.button-group($radius: 4px);
+}
 ```
 
 |Argument|Description|Example value|
 |---|---|---|
-|`$radius`|Borderorder radius|`4px`|
+|`$radius`|Border radius|`4px`|
