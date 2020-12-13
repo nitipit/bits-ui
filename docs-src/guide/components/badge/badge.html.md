@@ -31,7 +31,9 @@
 
 ## Usage
 ---
+
 `<pkt-badge>` or `class="pkt-badge"`.
+
 ```html
 <pkt-badge>1</pkt-badge>
 <span class="pkt-badge"></span>
@@ -44,4 +46,15 @@ Badge background color can be changed by using packet-ui background color class.
 ```html
 <!-- Example -->
 <pkt-badge class="bg-amber">1</pkt-badge>
+```
+
+## SCSS
+---
+
+```scss
+@use 'path/to/_ui.scss';
+
+pkt-badge {
+    @include badge($bg-color: red);
+}
 ```

@@ -24,20 +24,22 @@ html {
     font-family: fira-sans;
 }
 
-a {color: inherit;}
+a { color: inherit; }
+
+img { width: 100%; }
 
 .container {
     max-width: 800px;
     width: 90%;
     margin: auto;
 
-    h1 {
+    > h1 {
         text-align: center;
         padding-top: 1rem;
         margin-bottom: 0;
     }
 
-    h2 {
+    > h2 {
         margin-top: 2rem;
         margin-bottom: 0;
     }
