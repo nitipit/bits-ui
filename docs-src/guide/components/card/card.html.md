@@ -44,7 +44,7 @@
 </pkt-card>
 ```
 
-> CSS UI class `border-top-radius` or `border-bottom-radius` can be used to make round corner for elements inside.
+> <pkt-icon set="adwaita" name="dialog-information"></pkt-icon> CSS UI class `border-top-radius` or `border-bottom-radius` can be used to make round corner for elements inside.
 
 ## SCSS
 ---

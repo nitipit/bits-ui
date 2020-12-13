@@ -74,4 +74,4 @@ For example:
 <pkt-tag class="bg-int-purple">bg-int-purple</pkt-tag>
 ```
 
-> text color will change between black/white depends on background color.
+> <pkt-icon set="adwaita" name="dialog-information"></pkt-icon> text color will change between black/white depends on background color.

@@ -15,12 +15,35 @@ Packet UI provides icon set from [adwaita-icon-web](https://nitipit.github.io/ad
 ## Usage
 ---
 
+Before using, we need to load **adwaita.svg** in `<head>` section.
+
+> <pkt-icon set="adwaita" name="dialog-information"></pkt-icon> `adwaita.svg` is included in Packet UI distribution.
+
+
+```html
+<head>
+<link icon
+    rel="preload"
+    set="adwaita"
+    href="/path/to/packet-ui/adwaita-icon-web/adwaita.svg"
+    as="image" type="image/svg+xml">
+</head>
+```
+
+Then we can use `<pkt-icon>` by specify icon set and icon name.
+Furthermore, color and size can be applied by using css property: `color` & `font-size` as following example.
+
+
 ```html
 <pkt-icon set="adwaita" name="airplane-mode"></pkt-icon>
 
 <!-- with color and size -->
 <pkt-icon set="adwaita" name="airplane-mode"
+    style="color: red; font-size: 2em;">
+</pkt-icon>
+
+<!-- using predefined color CSS class -->
+<pkt-icon set="adwaita" name="airplane-mode"
     class="red"
-    style="font-size: 2em;">
 </pkt-icon>
 ```
