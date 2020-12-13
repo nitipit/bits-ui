@@ -4,12 +4,13 @@
 
 {% block head %}
 {{ super() }}
-<link rel="stylesheet" href="{{to_root}}guide/components/checkbox/checkbox.css?v={{_v}}">
+<link rel="stylesheet"
+    href="{{to_root}}guide/components/icon/icon.css?v={{_v}}">
 {% endblock %}
 
 {% block body %}
 {{ super() }}
 <div class="container">
-{{ markdown('checkbox.html.md') }}
+{{ markdown('icon.html.md') }}
 </div>
 {% endblock %}

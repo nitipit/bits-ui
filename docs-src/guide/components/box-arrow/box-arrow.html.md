@@ -28,17 +28,18 @@
 ## SCSS
 ---
 ```scss
-@use 'sass:color';
 @use 'path/to/_ui.scss';
 
-@include ui.box-arrow(
-    $arrow: top,
-    $arrow-size: 7px,
-    $position: 50%,
-    $bg-color: color.adjust(white, $lightness: -20%),
-    $border-width: 1px,
-    $border-color: black,
-    $radius: var.$border-radius)
+.pkt-box-arrow-top {
+    @include ui.box-arrow(
+        $arrow: top,
+        $arrow-size: 7px,
+        $position: 50%,
+        $bg-color: grey,
+        $border-width: 1px,
+        $border-color: black,
+        $radius: 4px)
+}
 ```
 
 |Argument|Description|Example value|

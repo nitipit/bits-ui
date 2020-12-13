@@ -52,8 +52,8 @@
 ```scss
 @use 'path/to/_ui.scss';
 
-card {
-    @include ui.card($radius: $border-radius);
+pkt-card {
+    @include ui.card($radius: 4px);
 }
 ```
 
