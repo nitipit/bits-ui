@@ -95,7 +95,7 @@ pkt-menu > ul {
     @include ui.menu();
 }
 
-div.pkt-path {
+ul.pkt-path {
     @include ui.path();
 }
 

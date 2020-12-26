@@ -38,12 +38,13 @@ Furthermore, color and size can be applied by using css property: `color` & `fon
 <pkt-icon set="adwaita" name="airplane-mode"></pkt-icon>
 
 <!-- with color and size -->
-<pkt-icon set="adwaita" name="airplane-mode"
-    style="color: red; font-size: 2em;">
-</pkt-icon>
+<pkt-icon set="adwaita" name="system-shutdown"
+    style="color: red; font-size: 4rem;"></pkt-icon>
 
 <!-- using predefined color CSS class -->
-<pkt-icon set="adwaita" name="airplane-mode"
-    class="red"
-</pkt-icon>
+<pkt-icon set="adwaita" name="mark-location"
+    class="red" style="font-size: 4rem;"></pkt-icon>
 ```
+
+<pkt-icon set="adwaita" name="system-shutdown" style="color: red; font-size: 4rem;"></pkt-icon>
+<pkt-icon set="adwaita" name="mark-location" class="red" style="font-size: 4rem;"></pkt-icon>

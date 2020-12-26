@@ -1,9 +1,10 @@
-<h1 style="margin: 0; border: 0; text-align: center;">Menu</h1>
+# Menu
 
-# Preview
+## Preview
+---
 
 <div id="preview">
-    <bits-menu>
+    <pkt-menu>
     <ul>
         <li>
             <a>1</a>
@@ -38,12 +39,13 @@
             </ul>
         </li>
     </ul>
-    </bits-menu>
+    </pkt-menu>
 </div>
 
-# Usage
+## Usage
+---
 ```html
-<bits-menu><ul>
+<pkt-menu><ul>
     <li>
         <a>1</a>
         <ul>
@@ -76,19 +78,24 @@
             </li>
         </ul>
     </li>
-</ul></bits-menu>
+</ul></pkt-menu>
 ```
 
-# Stylus
+## SCSS
+---
 
-```stylus
-menu(
-    $border-color: $color-p,
-    $active-color: $color-p,
-    $arrow-color: $color-a1)
+```scss
+@use 'path/to/_ui.scss';
+
+pkt-menu {
+    @include ui.menu(
+        $border-color: orange,
+        $active-color: orange,
+        $arrow-color: orange)
+}
 ```
 
-|Argument|Description|Example value|
+|Argument|Description|Example|
 |---|---|---|
 |`$border-color`|Border color : Color supported by **CSS**, **Stylus** or **Bits UI Color**|`red` `$color-p` `#AAA`|
 |`$active-color`|Active color on click : Color supported by **CSS**, **Stylus** or **Bits UI Color**|`red` `$color-p` `#AAA`|

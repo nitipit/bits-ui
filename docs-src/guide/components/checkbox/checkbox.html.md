@@ -41,9 +41,11 @@
 ```scss
 @use 'path/to/_ui.scss';
 
-@include ui.checkbox(
-    $bg-color: grey, // Inactive background color
-    $color-active: orange) // Active & Hover color
+pkt-checkbox {
+    @include ui.checkbox(
+        $bg-color: grey, // Inactive background color
+        $color-active: orange) // Active & Hover color
+    }
 }
 ```
 
