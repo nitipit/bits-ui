@@ -1,15 +1,15 @@
-<h1 style="margin: 0; border: 0; text-align: center;">Table</h1>
+# Table
 
-<h2 style="text-align: center;"><tag>Styled Element</tag></h2>
-
-# Preview
+## Preview
+---
 |Column 1|Column 2|Column 3|
 |---|---|---|
 |11|12|13|
 |21|22|23|
 |31|32|33|
 
-# Usage
+## Usage
+---
 ```html
 <table>
     <thead>
@@ -39,10 +39,23 @@
 </table>
 ```
 
-# Stylus
-```stylus
-table(
-        $bg-color: $color-a2,
+## SCSS
+---
+```scss
+@use 'path/to/_ui.scss';
+
+table {
+    @include ui.table(
+        $bg-color: orange,
         $border-vertical: true,
         $border-horizontal: true)
+}
 ```
+
+### Arguments
+
+|Argument|Description|Example Value|
+|---|---|---|
+|`$bg-color`|background color|`grey` `#AAA`|
+|`$border-vertical`|Show vertical line (boolean)|`true` `false`|
+|`$border-vertical`|Show horizontal line (boolean)|`true` `false`|

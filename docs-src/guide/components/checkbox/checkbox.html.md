@@ -49,7 +49,7 @@ pkt-checkbox {
 }
 ```
 
-|Argument|Description|Example value|
+|Argument|Description|Example Value|
 |---|---|---|
 |`$bg-color`|inactive background color|`grey` `#AAA`|
 |`$color-active`|background color for **active** and **hover** state|`orange`|

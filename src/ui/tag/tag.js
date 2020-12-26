@@ -1,4 +1,3 @@
-import { html, render } from 'lit-html';
 import Color from 'color';
 
 export class Tag extends HTMLElement {

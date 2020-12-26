@@ -1,11 +1,15 @@
 {% extends 'guide/_base.html' %}
 
+{% set to_root = '../../../' %}
+
 {% block head %}
-<link rel="stylesheet" href="/bits-ui/static/template/guide/components/table/table.css?v={{_v}}">
+{{ super() }}
+<link rel="stylesheet" href="{{to_root}}guide/components/table/table.css?v={{_v}}">
 {% endblock %}
 
 {% block body %}
+{{ super() }}
 <div class="container">
-{{ markdown('table.md') }}
+{{ markdown('table.html.md') }}
 </div>
 {% endblock %}

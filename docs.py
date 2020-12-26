@@ -38,7 +38,7 @@ async def packet_ui():
             if (change == Change.added) or (change == Change.modified):
                 dest.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy(path, dest)
-                print(f'{str(change)} : {dest}')
+                print(f'{str(change)} : {dest.relative_to(_docs_dir)}')
 
 
 async def main():

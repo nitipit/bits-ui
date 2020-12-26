@@ -1,31 +1,38 @@
-<h1 style="margin: 0; border: 0; text-align: center;">Switch</h1>
+# Switch
 
-# Preview
+## Preview
+---
 <div data-id="preview" style="font-size: 1.5rem; display: flex;">
-    <bits-switch></bits-switch>
-    <bits-switch class="color-a2">
+    <pkt-switch></pkt-switch>
+    <pkt-switch class="color-a2">
         <input type="checkbox">
         <div el="label">
             <span>YES</span>
             <span>NO</span>
         </div>
-    </bits-switch>
+    </pkt-switch>
 </div>
 
-# Usage
+## Usage
+---
 ```html
-<bits-switch></bits-switch>
+<pkt-switch></pkt-switch>
 
-<bits-switch>
+<pkt-switch>
     <input type="checkbox">
     <div el="label">
         <span>YES</span>
         <span>NO</span>
     </div>
-</bits-switch>
+</pkt-switch>
 ```
 
-# Stylus
-```stylus
-switch($color-active: $ui-color)
+## SCSS
+---
+```scss
+@use 'path/to/_ui.scss';
+
+pkt-switch {
+    @include ui.switch($color-active: orange);
+}
 ```

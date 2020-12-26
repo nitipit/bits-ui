@@ -1,0 +1,17 @@
+@use '../../../_var';
+@use '../../../_ui';
+
+div[data-id="preview"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pkt-switch {
+        margin: 0.5rem
+    }
+    pkt-switch.color-p {
+        @include ui.switch(var.$color-p);
+    }
+    pkt-switch.color-a2 {
+        @include ui.switch(var.$color-a2);
+    }
+}

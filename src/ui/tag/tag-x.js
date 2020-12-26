@@ -1,4 +1,5 @@
 import {html, render} from 'lit-html';
+import Color from 'color';
 
 export class TagX extends HTMLElement {
     constructor() {
@@ -16,7 +17,12 @@ export class TagX extends HTMLElement {
     }
 
     connectedCallback() {
-        this.render()
+        this.render();
+        let shadow_color = window
+            .getComputedStyle(this)
+            .getPropertyValue('background-color');
+        shadow_color = Color(shadow_color).darken(0.5);
+        this.style.boxShadow = `0 0.17em 0 0 ${shadow_color}`;
     }
 
     remove() {
