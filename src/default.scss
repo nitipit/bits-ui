@@ -60,10 +60,6 @@ pkt-file {
     @include ui.file();
 }
 
-pkt-icon {
-    @include ui.icon();
-}
-
 input {
     @include ui.input-text();
     &[type="text"], &[type="password"], &[type="email"] {
@@ -99,7 +95,7 @@ pkt-menu > ul {
     @include ui.menu();
 }
 
-div.pkt-path {
+ul.pkt-path {
     @include ui.path();
 }
 
@@ -119,10 +115,6 @@ pkt-spinner {
 
 pkt-sidebar {
     @include ui.sidebar();
-}
-
-pkt-slide {
-    @include ui.slide();
 }
 
 pkt-switch {

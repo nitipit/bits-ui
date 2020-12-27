@@ -1,0 +1,41 @@
+@use '../../../_ui';
+@use '../../../_var';
+
+.flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.c-p {
+    @include ui.checkbox($color-active: var.$color-p);
+}
+.c-a1 {
+    @include ui.checkbox($color-active: var.$color-a1);
+}
+.c-a2 {
+    @include ui.checkbox($color-active: var.$color-a2);
+}
+.c-t1 {
+    @include ui.checkbox($color-active: var.$color-t1);
+}
+.c-t2 {
+    @include ui.checkbox($color-active: var.$color-t2);
+}
+.c-c {
+    @include ui.checkbox($color-active: var.$color-c);
+}
+
+.size-1 {
+    font-size: 1rem;
+}
+.size-2 {
+    font-size: 2rem;
+}
+.size-3 {
+    font-size: 3rem;
+}
+.size-4 {
+    font-size: 4rem;
+}

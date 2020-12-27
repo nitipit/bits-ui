@@ -38,7 +38,10 @@ Use web components `<pkt-*>` anywhere in html `<body>`, for examples:
 
 ```html
 <body>
-    <pkt-badge></pkt-badge>
+    <pkt-badge>1</pkt-badge>
     <pkt-switch></pkt-switch>
 </body>
 ```
+
+<pkt-badge style="vertical-align: middle;">1</pkt-badge>
+<pkt-switch style="margin-left: 1rem;"></pkt-switch>

@@ -1,0 +1,15 @@
+@use '../../../_var';
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    &[type="text"],
+    &[type="email"],
+    &[type="password"] {
+        margin-top: 1rem;
+    }
+}

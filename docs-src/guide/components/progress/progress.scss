@@ -1,0 +1,6 @@
+@use '../../../_ui';
+@use '../../../var';
+
+pkt-progress-bar.a1 {
+    @include ui.progress-bar($color: var.$color-a1);
+}

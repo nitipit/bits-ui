@@ -1,0 +1,16 @@
+{% extends 'guide/_base.html' %}
+
+{% set to_root = '../../../' %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet"
+    href="{{to_root}}guide/components/icon/icon.css?v={{_v}}">
+{% endblock %}
+
+{% block body %}
+{{ super() }}
+<div class="container">
+{{ markdown('icon.html.md') }}
+</div>
+{% endblock %}

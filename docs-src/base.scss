@@ -24,12 +24,25 @@ html {
     font-family: fira-sans;
 }
 
-a {color: inherit;}
+a { color: inherit; }
+
+img { width: 100%; }
 
 .container {
     max-width: 800px;
     width: 90%;
     margin: auto;
+
+    > h1 {
+        text-align: center;
+        padding-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    > h2 {
+        margin-top: 2rem;
+        margin-bottom: 0;
+    }
 }
 
 .row {
@@ -39,15 +52,21 @@ a {color: inherit;}
 code {
     background-color: #282c34;
     color: color.adjust(white, $lightness: -10%);
+    border-radius: 4px;
+    vertical-align: middle;
 }
 
 code.hljs {
     border-radius: 5px;
 }
 
-#sidebar-button {
-    position: fixed;
-    top: 1.5rem;
-    left: 1.5rem;
-    font-size: 1.25rem;
+blockquote {
+    background: color.adjust(var.$color-p, $lightness: 35%);
+    p {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+    pkt-icon {
+        color: var.$color-a1;
+    }
 }

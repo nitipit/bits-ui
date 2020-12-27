@@ -1,7 +1,10 @@
 {% extends 'guide/_base.html' %}
 
+{% set to_root = '../../../' %}
+
 {% block head %}
-<link rel="stylesheet" href="/bits-ui/static/template/guide/components/sidebar/sidebar.css?v={{_v}}">
+{{ super() }}
+<link rel="stylesheet" href="{{to_root}}guide/components/sidebar/sidebar.css?v={{_v}}">
 <script>
 window.addEventListener('load', function(){
     var sidebar_btn = document.querySelector('#preview [data-id="menu"]');
@@ -13,7 +16,8 @@ window.addEventListener('load', function(){
 {% endblock %}
 
 {% block body %}
+{{ super() }}
 <div class="container">
-{{ markdown('sidebar.md') }}
+{{ markdown('sidebar.html.md') }}
 </div>
 {% endblock %}

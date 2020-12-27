@@ -1,0 +1,19 @@
+#preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    pkt-icon {
+        padding: 1rem;
+    }
+    .size-1 {
+        font-size: 2rem;
+    }
+    .size-2 {
+        font-size: 3rem;
+    }
+    .size-3 {
+        font-size: 4rem;
+    }
+}
