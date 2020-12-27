@@ -1,0 +1,16 @@
+#preview .flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#preview .flex > * {
+  margin: 0.5rem;
+}
+
+.flex.p {
+  display: flex;
+  align-items: center;
+  max-width: 45rem;
+}
+
+/*# sourceMappingURL=button.css.map */

@@ -1,0 +1,11 @@
+body {
+  padding-bottom: 10rem;
+}
+
+@media (min-width: 1150px) {
+  .container {
+    margin-left: 300px;
+  }
+}
+
+/*# sourceMappingURL=base.css.map */

@@ -1,0 +1,245 @@
+<html>
+<head>
+
+
+<title>Packet UI</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<link rel="stylesheet" href="../../../static/lib/packet-ui/normalize.css?v=25">
+<link rel="stylesheet" href="../../../static/lib/packet-ui/packet-ui.css?v=25">
+<link icon rel="preload" set="adwaita" href="../../../static/lib/adwaita-icon-web/adwaita.svg?v=25" as="image"
+    type="image/svg+xml">
+<link icon rel="preload" set="brand" href="../../../static/asset/icon/brand/symbol-defs.svg?v=25" as="image"
+    type="image/svg+xml">
+<link rel="stylesheet" href="../../../static/lib/highlight.js/atom-one-dark.css?v=25">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36104934-6"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-36104934-6');
+</script>
+<!-- End Google Analytics -->
+<link rel="stylesheet" href="../../../base.css?v=25">
+<script defer src="../../../base.js"></script>
+
+
+
+
+<link rel="stylesheet" href="../../../guide/base.css?v=25">
+<link rel="stylesheet" href="../../../guide/sidebar.css?v=25">
+
+<link rel="stylesheet" href="../../../guide/components/input/input.css?v=25">
+
+</head>
+<body>
+
+<div class="container">
+<h1>Input</h1>
+<h2>Text, Email, Password, etc.</h2>
+<hr />
+<div>
+    <input type="text" placeholder="Text">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+</div>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
+&lt;input type=&quot;email&quot; placeholder=&quot;Email&quot;&gt;
+&lt;input type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;
+</code></pre>
+<h2>Number Input</h2>
+<hr />
+<pkt-input-number>
+    <input type="number" max="1000" min="0">
+</pkt-input-number>
+<pre><code class="language-html">&lt;pkt-input-number&gt;&lt;/pkt-input-number&gt;
+
+&lt;!-- Customized input --&gt;
+&lt;pkt-input-number&gt;
+    &lt;input type=&quot;number&quot; max=&quot;1000&quot; min=&quot;0&quot;&gt;
+&lt;/pkt-input-number&gt;
+</code></pre>
+<h2>Radio Input</h2>
+<hr />
+<div>
+    <pkt-input-radio>
+        <input type="radio" name="gender" value="m">
+    </pkt-input-radio>
+    <span>Male</span>
+    <pkt-input-radio>
+        <input type="radio" name="gender" value="f">
+    </pkt-input-radio>
+    <span>Female</span>
+</div>
+<div class="pkt-button-group" style="margin-top: 2rem;">
+    <pkt-input-radio-btn>
+        <input type="radio" name="position" value="left">
+        <button>Left</button>
+    </pkt-input-radio-btn>
+    <pkt-input-radio-btn>
+        <input type="radio" name="position" value="center">
+        <button>Center</button>
+    </pkt-input-radio-btn>
+    <pkt-input-radio-btn>
+        <input type="radio" name="position" value="center">
+        <button>Right</button>
+    </pkt-input-radio-btn>
+</div>
+<pre><code class="language-html">&lt;pkt-input-radio&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;m&quot;&gt;
+&lt;/pkt-input-radio&gt;
+&lt;span&gt;Male&lt;/span&gt;
+&lt;pkt-input-radio&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;f&quot;&gt;
+&lt;/pkt-input-radio&gt;
+&lt;span&gt;Female&lt;/span&gt;
+</code></pre>
+<pre><code class="language-html">&lt;pkt-button-group&gt;
+    &lt;pkt-input-radio-btn&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;position&quot; value=&quot;left&quot;&gt;
+        &lt;button&gt;Left&lt;/button&gt;
+    &lt;/pkt-input-radio-btn&gt;
+    &lt;pkt-input-radio-btn&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;position&quot; value=&quot;center&quot;&gt;
+        &lt;button&gt;Center&lt;/button&gt;
+    &lt;/pkt-input-radio-btn&gt;
+    &lt;pkt-input-radio-btn&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;position&quot; value=&quot;center&quot;&gt;
+        &lt;button&gt;Right&lt;/button&gt;
+    &lt;/pkt-input-radio-btn&gt;
+&lt;/pkt-button-group&gt;
+</code></pre>
+<h2>Range Input</h2>
+<hr />
+<div style="display: flex; justify-content: center;">
+    <input type="range" style="min-width: 200px; width: 50%;
+        margin-top: 3rem; margin-bottom: 2rem;">
+</div>
+<h3>Usage</h3>
+<pre><code class="language-html">&lt;input type=&quot;range&quot;&gt;
+</code></pre>
+<h3>SCSS</h3>
+<pre><code class="language-scss">@use 'path/to/_ui.scss';
+
+input[type=&quot;range&quot;] {
+    @include ui.slider(
+        $thumb-color: grey,
+        $thumb-color-active: orange,
+        $bar-color: grey)
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Description</th>
+  <th>Example value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>$thumb-color</code></td>
+  <td>Slider's thumb color : Color supported by <strong>CSS</strong>, <strong>Stylus</strong> or <strong>Bits UI Color</strong></td>
+  <td><code>red</code> <code>#AAA</code></td>
+</tr>
+<tr>
+  <td><code>$thumb-color-active</code></td>
+  <td>Slider's thumb color for <strong>active</strong> and <strong>hover</strong> state</td>
+  <td><code>red</code> <code>#AAA</code></td>
+</tr>
+<tr>
+  <td><code>$bar-color</code></td>
+  <td>Slider's bar color</td>
+  <td><code>red</code> <code>#AAA</code></td>
+</tr>
+</tbody>
+</table>
+<h2>Tag Input</h2>
+<hr />
+<div style="margin-top: 2rem;">
+    <pkt-input-tag></bitsinput-tag>
+</div>
+<h3>Usage</h3>
+<pre><code class="language-html">&lt;pkt-input-tag&gt;&lt;/pkt-input-tag&gt;
+</code></pre>
+<h3>API</h3>
+<table>
+<thead>
+<tr>
+  <th>API</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>add_tag(value)</code></td>
+  <td>Add <code>value</code> as a tag</td>
+</tr>
+<tr>
+  <td><code>tags</code></td>
+  <td>Get tag list from input</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<script>
+var sidebar = null // declare `sidebar` as global variable
+window.addEventListener('load', function () {
+    sidebar = document.querySelector('pkt-sidebar')
+    var sidebar_button = document.querySelector('#sidebar-button');
+    sidebar_button.addEventListener('click', function () {
+        sidebar.show_sidebar();
+    });
+});
+</script>
+
+<div class="pkt-button-pin" id="sidebar-button">
+    <pkt-icon set="adwaita" name="view-dual"></pkt-icon>
+</div>
+<pkt-sidebar id="sidebar" show="1150px">
+    <div el="wrapper">
+        <div el="title" class="bg-a1">
+            <a href="../../../">Packet UI</a>
+            <pkt-button-square onclick="sidebar.hide_sidebar()">
+                <pkt-icon set="adwaita" name="window-close"></pkt-icon>
+            </pkt-button-square>
+        </div>
+        <div el="content">
+            <div class="h">Getting Started</div>
+            <a href="../../../guide/getting-started/#basic-set-up">Basic Setup</a>
+            <a href="../../../guide/getting-started/#usage">Usage</a>
+            <div class="h">Color System</div>
+            <a href="../../../guide/color/pallete.html">Pallete</a>
+            <a href="../../../guide/color/scheme.html">Color Scheme</a>
+            <div class="h">UI Components</div>
+            <a href="../../../guide/components/badge/badge.html">Badge</a>
+            <a href="../../../guide/components/box-arrow/box-arrow.html">Box Arrow</a>
+            <a href="../../../guide/components/button/button.html">Buttons</a>
+            <a href="../../../guide/components/card/card.html">Card</a>
+            <a href="../../../guide/components/checkbox/checkbox.html">Checkbox</a>
+            <a href="../../../guide/components/icon/icon.html">Icon</a>
+            <a href="../../../guide/components/input/input.html">Input</a>
+            <a href="../../../guide/components/menu/menu.html">Menu</a>
+            <a href="../../../guide/components/path/path.html">Path</a>
+            <a href="../../../guide/components/progress/progress.html">Progress</a>
+            <a href="../../../guide/components/sidebar/sidebar.html">Sidebar</a>
+            <a href="../../../guide/components/switch/switch.html">Switch</a>
+            <a href="../../../guide/components/tab/tab.html">Tab</a>
+            <a href="../../../guide/components/table/table.html">Table</a>
+            <a href="../../../guide/components/tag/tag.html">Tag</a>
+        </div>
+    </div>
+    <div el="overlay">
+        <!-- Overlay is dark background over the page. -->
+    </div>
+</pkt-sidebar>
+
+</body>
+</html>

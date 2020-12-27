@@ -1,0 +1,197 @@
+<html>
+<head>
+
+
+<title>Packet UI</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<link rel="stylesheet" href="../../../static/lib/packet-ui/normalize.css?v=25">
+<link rel="stylesheet" href="../../../static/lib/packet-ui/packet-ui.css?v=25">
+<link icon rel="preload" set="adwaita" href="../../../static/lib/adwaita-icon-web/adwaita.svg?v=25" as="image"
+    type="image/svg+xml">
+<link icon rel="preload" set="brand" href="../../../static/asset/icon/brand/symbol-defs.svg?v=25" as="image"
+    type="image/svg+xml">
+<link rel="stylesheet" href="../../../static/lib/highlight.js/atom-one-dark.css?v=25">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36104934-6"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-36104934-6');
+</script>
+<!-- End Google Analytics -->
+<link rel="stylesheet" href="../../../base.css?v=25">
+<script defer src="../../../base.js"></script>
+
+
+
+
+<link rel="stylesheet" href="../../../guide/base.css?v=25">
+<link rel="stylesheet" href="../../../guide/sidebar.css?v=25">
+
+<link rel="stylesheet" href="../../../guide/components/table/table.css?v=25">
+
+</head>
+<body>
+
+
+
+<div class="container">
+<h1>Table</h1>
+<h2>Preview</h2>
+<hr />
+<table>
+<thead>
+<tr>
+  <th>Column 1</th>
+  <th>Column 2</th>
+  <th>Column 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>11</td>
+  <td>12</td>
+  <td>13</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td>22</td>
+  <td>23</td>
+</tr>
+<tr>
+  <td>31</td>
+  <td>32</td>
+  <td>33</td>
+</tr>
+</tbody>
+</table>
+<h2>Usage</h2>
+<hr />
+<pre><code class="language-html">&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Column 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;11&lt;/td&gt;
+            &lt;td&gt;12&lt;/td&gt;
+            &lt;td&gt;13&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;21&lt;/td&gt;
+            &lt;td&gt;22&lt;/td&gt;
+            &lt;td&gt;23&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;31&lt;/td&gt;
+            &lt;td&gt;32&lt;/td&gt;
+            &lt;td&gt;33&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<h2>SCSS</h2>
+<hr />
+<pre><code class="language-scss">@use 'path/to/_ui.scss';
+
+table {
+    @include ui.table(
+        $bg-color: orange,
+        $border-vertical: true,
+        $border-horizontal: true)
+}
+</code></pre>
+<h3>Arguments</h3>
+<table>
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Description</th>
+  <th>Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>$bg-color</code></td>
+  <td>background color</td>
+  <td><code>grey</code> <code>#AAA</code></td>
+</tr>
+<tr>
+  <td><code>$border-vertical</code></td>
+  <td>Show vertical line (boolean)</td>
+  <td><code>true</code> <code>false</code></td>
+</tr>
+<tr>
+  <td><code>$border-vertical</code></td>
+  <td>Show horizontal line (boolean)</td>
+  <td><code>true</code> <code>false</code></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<script>
+var sidebar = null // declare `sidebar` as global variable
+window.addEventListener('load', function () {
+    sidebar = document.querySelector('pkt-sidebar')
+    var sidebar_button = document.querySelector('#sidebar-button');
+    sidebar_button.addEventListener('click', function () {
+        sidebar.show_sidebar();
+    });
+});
+</script>
+
+<div class="pkt-button-pin" id="sidebar-button">
+    <pkt-icon set="adwaita" name="view-dual"></pkt-icon>
+</div>
+<pkt-sidebar id="sidebar" show="1150px">
+    <div el="wrapper">
+        <div el="title" class="bg-a1">
+            <a href="../../../">Packet UI</a>
+            <pkt-button-square onclick="sidebar.hide_sidebar()">
+                <pkt-icon set="adwaita" name="window-close"></pkt-icon>
+            </pkt-button-square>
+        </div>
+        <div el="content">
+            <div class="h">Getting Started</div>
+            <a href="../../../guide/getting-started/#basic-set-up">Basic Setup</a>
+            <a href="../../../guide/getting-started/#usage">Usage</a>
+            <div class="h">Color System</div>
+            <a href="../../../guide/color/pallete.html">Pallete</a>
+            <a href="../../../guide/color/scheme.html">Color Scheme</a>
+            <div class="h">UI Components</div>
+            <a href="../../../guide/components/badge/badge.html">Badge</a>
+            <a href="../../../guide/components/box-arrow/box-arrow.html">Box Arrow</a>
+            <a href="../../../guide/components/button/button.html">Buttons</a>
+            <a href="../../../guide/components/card/card.html">Card</a>
+            <a href="../../../guide/components/checkbox/checkbox.html">Checkbox</a>
+            <a href="../../../guide/components/icon/icon.html">Icon</a>
+            <a href="../../../guide/components/input/input.html">Input</a>
+            <a href="../../../guide/components/menu/menu.html">Menu</a>
+            <a href="../../../guide/components/path/path.html">Path</a>
+            <a href="../../../guide/components/progress/progress.html">Progress</a>
+            <a href="../../../guide/components/sidebar/sidebar.html">Sidebar</a>
+            <a href="../../../guide/components/switch/switch.html">Switch</a>
+            <a href="../../../guide/components/tab/tab.html">Tab</a>
+            <a href="../../../guide/components/table/table.html">Table</a>
+            <a href="../../../guide/components/tag/tag.html">Tag</a>
+        </div>
+    </div>
+    <div el="overlay">
+        <!-- Overlay is dark background over the page. -->
+    </div>
+</pkt-sidebar>
+
+</body>
+</html>

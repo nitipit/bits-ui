@@ -1,0 +1,135 @@
+/* Small Screen */
+/* Medium Screen */
+/* Large Screen */
+#highlight {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 40vh;
+  align-content: center;
+  justify-content: center;
+}
+#highlight pkt-tag h1 {
+  line-height: 1;
+  margin: 0.5rem;
+}
+#highlight a.button {
+  margin: 0.5rem;
+}
+#highlight a[el=github] {
+  font-family: packet-ui;
+  font-size: 1em;
+  box-shadow: 0 1px 3px 0 #404040;
+  background-color: #e6e6e6;
+  color: black;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 4px;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  height: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#highlight a[el=github]:hover {
+  background-color: white;
+}
+#highlight a[el=github]:active {
+  background-color: #cccccc;
+}
+#highlight a[el=github]:hover {
+  box-shadow: 0 2px 5px 0 #404040;
+}
+#highlight a[el=github]:active {
+  box-shadow: 0 1px 3px 0 #404040;
+}
+#highlight a[el=github][disabled]:hover {
+  cursor: not-allowed;
+}
+#highlight a[el=github] a {
+  text-decoration: none;
+}
+
+.markdown h2 {
+  border-bottom: 1px solid;
+  margin-top: 2rem;
+}
+
+#sample {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+#sample pkt-card {
+  background-color: #f2f2f2;
+}
+#sample table {
+  max-width: 280px;
+  width: 280px;
+}
+#sample table tr {
+  background-color: #f2f2f2;
+}
+#sample table td {
+  text-align: center;
+}
+
+#features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #eee;
+  padding: 2rem 0rem 5rem 0;
+}
+#features .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#features .container h2 {
+  border-bottom: 1px solid;
+  text-align: center;
+  display: inline-flex;
+}
+#features .row {
+  display: flex;
+  justify-content: center;
+}
+#features pkt-card {
+  max-width: 600px;
+  min-width: 280px;
+  width: 90%;
+  margin-top: 2rem;
+  background-color: white;
+}
+#features pkt-card h3 {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: #1a1a1a;
+  color: white;
+}
+#features pkt-card[el=icon-system] [el=icons] {
+  font-size: 1.25rem;
+}
+#features pkt-card[el=icon-system] [el=icons] button {
+  background-color: #eee;
+  color: black;
+}
+#features pkt-card[el=icon-system] [el=icons] button:hover {
+  background-color: white;
+}
+#features pkt-card[el=icon-system] [el=icons] button:active {
+  background-color: #d5d5d5;
+}
+#features pkt-card[el=icon-system] [el=icons] button:hover {
+  color: #ff4507;
+}
+
+/*# sourceMappingURL=index.css.map */

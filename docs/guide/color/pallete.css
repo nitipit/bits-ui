@@ -1,0 +1,23 @@
+/* Small Screen */
+/* Medium Screen */
+/* Large Screen */
+#pallete .row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#pallete .row > div {
+  display: block;
+  width: 100%;
+  height: 0.7rem;
+}
+
+#badge {
+  font-size: 1.2rem;
+}
+#badge pkt-badge {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/*# sourceMappingURL=pallete.css.map */

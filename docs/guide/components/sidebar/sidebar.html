@@ -1,0 +1,171 @@
+<html>
+<head>
+
+
+<title>Packet UI</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<link rel="stylesheet" href="../../../static/lib/packet-ui/normalize.css?v=25">
+<link rel="stylesheet" href="../../../static/lib/packet-ui/packet-ui.css?v=25">
+<link icon rel="preload" set="adwaita" href="../../../static/lib/adwaita-icon-web/adwaita.svg?v=25" as="image"
+    type="image/svg+xml">
+<link icon rel="preload" set="brand" href="../../../static/asset/icon/brand/symbol-defs.svg?v=25" as="image"
+    type="image/svg+xml">
+<link rel="stylesheet" href="../../../static/lib/highlight.js/atom-one-dark.css?v=25">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36104934-6"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-36104934-6');
+</script>
+<!-- End Google Analytics -->
+<link rel="stylesheet" href="../../../base.css?v=25">
+<script defer src="../../../base.js"></script>
+
+
+
+
+<link rel="stylesheet" href="../../../guide/base.css?v=25">
+<link rel="stylesheet" href="../../../guide/sidebar.css?v=25">
+
+<link rel="stylesheet" href="../../../guide/components/sidebar/sidebar.css?v=25">
+<script>
+window.addEventListener('load', function(){
+    var sidebar_btn = document.querySelector('#preview [data-id="menu"]');
+    sidebar_btn.addEventListener('click', function(){
+        sidebar.show_sidebar();
+    })
+})
+</script>
+
+</head>
+<body>
+
+
+
+<div class="container">
+<h1>Sidebar</h1>
+<div id="preview" style="text-align: center; margin-top: 2rem;">
+    <span data-id="menu" class="pkt-button-pin" style="font-size: 3rem;">
+        <pkt-icon set="adwaita" name="view-dual"></pkt-icon>
+    </span>
+</div>
+<h2>Usage</h2>
+<hr />
+<pre><code class="language-html">&lt;!-- In &lt;head&gt;&lt;/head&gt; section. --&gt;
+&lt;script&gt;
+var sidebar = null // declare `sidebar` as global variable
+window.addEventListener('load', function(){
+    sidebar = document.querySelector('pkt-sidebar')
+    var sidebar_button = document.querySelector('#sidebar-button');
+    sidebar_button.addEventListener('click', function(){
+        sidebar.show_sidebar();
+    });
+});
+&lt;/script&gt;
+</code></pre>
+<pre><code class="language-html">&lt;!-- In &lt;body&gt;&lt;/body&gt; section. --&gt;
+&lt;span id=&quot;sidebar-button&quot; class=&quot;pkt-button-pin&quot;&gt;
+    &lt;pkt-icon set=&quot;adwaita&quot; name=&quot;open-menu&quot;&gt;&lt;/pkt-icon&gt;
+&lt;/span&gt;
+
+&lt;pkt-sidebar show=&quot;1000px&quot;&gt;
+    &lt;div el=&quot;wrapper&quot; style=&quot;background-color: white;&quot;&gt;
+        &lt;!-- Sidebar contents --&gt;
+    &lt;/div&gt;
+    &lt;div el=&quot;overlay&quot;&gt;&lt;/div&gt;
+&lt;/pkt-sidebar&gt;
+</code></pre>
+<h2>Attributes</h2>
+<hr />
+<table>
+<thead>
+<tr>
+  <th>Attr</th>
+  <th>Description</th>
+  <th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>show</td>
+  <td>Minimum screen width to show sidebar</td>
+  <td><code>1000px</code></td>
+</tr>
+</tbody>
+</table>
+<h2>API</h2>
+<hr />
+<p><code>show_sidebar()</code> : Show sidebar.<br />
+<code>show_sidebar_no_overlay()</code> : Show sidebar without overlay.<br />
+<code>hide_sidebar()</code> : Hide sidebar.</p>
+<h3>Example in Javascript</h3>
+<pre><code class="language-javascript">var sidebar = document.querySelector('pkt-sidebar');
+
+sidebar.show_sidebar();
+sidebar.hide_sidebar();
+sidebar.show_sidebar_no_overlay();
+</code></pre>
+
+</div>
+
+
+
+<script>
+var sidebar = null // declare `sidebar` as global variable
+window.addEventListener('load', function () {
+    sidebar = document.querySelector('pkt-sidebar')
+    var sidebar_button = document.querySelector('#sidebar-button');
+    sidebar_button.addEventListener('click', function () {
+        sidebar.show_sidebar();
+    });
+});
+</script>
+
+<div class="pkt-button-pin" id="sidebar-button">
+    <pkt-icon set="adwaita" name="view-dual"></pkt-icon>
+</div>
+<pkt-sidebar id="sidebar" show="1150px">
+    <div el="wrapper">
+        <div el="title" class="bg-a1">
+            <a href="../../../">Packet UI</a>
+            <pkt-button-square onclick="sidebar.hide_sidebar()">
+                <pkt-icon set="adwaita" name="window-close"></pkt-icon>
+            </pkt-button-square>
+        </div>
+        <div el="content">
+            <div class="h">Getting Started</div>
+            <a href="../../../guide/getting-started/#basic-set-up">Basic Setup</a>
+            <a href="../../../guide/getting-started/#usage">Usage</a>
+            <div class="h">Color System</div>
+            <a href="../../../guide/color/pallete.html">Pallete</a>
+            <a href="../../../guide/color/scheme.html">Color Scheme</a>
+            <div class="h">UI Components</div>
+            <a href="../../../guide/components/badge/badge.html">Badge</a>
+            <a href="../../../guide/components/box-arrow/box-arrow.html">Box Arrow</a>
+            <a href="../../../guide/components/button/button.html">Buttons</a>
+            <a href="../../../guide/components/card/card.html">Card</a>
+            <a href="../../../guide/components/checkbox/checkbox.html">Checkbox</a>
+            <a href="../../../guide/components/icon/icon.html">Icon</a>
+            <a href="../../../guide/components/input/input.html">Input</a>
+            <a href="../../../guide/components/menu/menu.html">Menu</a>
+            <a href="../../../guide/components/path/path.html">Path</a>
+            <a href="../../../guide/components/progress/progress.html">Progress</a>
+            <a href="../../../guide/components/sidebar/sidebar.html">Sidebar</a>
+            <a href="../../../guide/components/switch/switch.html">Switch</a>
+            <a href="../../../guide/components/tab/tab.html">Tab</a>
+            <a href="../../../guide/components/table/table.html">Table</a>
+            <a href="../../../guide/components/tag/tag.html">Tag</a>
+        </div>
+    </div>
+    <div el="overlay">
+        <!-- Overlay is dark background over the page. -->
+    </div>
+</pkt-sidebar>
+
+</body>
+</html>

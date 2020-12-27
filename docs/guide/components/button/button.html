@@ -1,0 +1,293 @@
+<html>
+<head>
+
+
+<title>Packet UI</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<link rel="stylesheet" href="../../../static/lib/packet-ui/normalize.css?v=25">
+<link rel="stylesheet" href="../../../static/lib/packet-ui/packet-ui.css?v=25">
+<link icon rel="preload" set="adwaita" href="../../../static/lib/adwaita-icon-web/adwaita.svg?v=25" as="image"
+    type="image/svg+xml">
+<link icon rel="preload" set="brand" href="../../../static/asset/icon/brand/symbol-defs.svg?v=25" as="image"
+    type="image/svg+xml">
+<link rel="stylesheet" href="../../../static/lib/highlight.js/atom-one-dark.css?v=25">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36104934-6"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-36104934-6');
+</script>
+<!-- End Google Analytics -->
+<link rel="stylesheet" href="../../../base.css?v=25">
+<script defer src="../../../base.js"></script>
+
+
+
+
+<link rel="stylesheet" href="../../../guide/base.css?v=25">
+<link rel="stylesheet" href="../../../guide/sidebar.css?v=25">
+
+<link rel="stylesheet" href="../../../guide/components/button/button.css?v=25">
+
+</head>
+<body>
+
+
+
+<div class="container">
+<h1>Buttons</h1>
+<h2>Preview</h2>
+<hr />
+<div id="preview">
+    <div class="flex">
+        <button>Button</button>
+        <span class="pkt-button-pin">+</span>
+        <span class="pkt-button-square">
+            <pkt-icon set="adwaita" name="emblem-shared"></pkt-icon>
+        </span>
+    </div>
+    <div class="flex">
+        <div class="pkt-button-group" style="width: 10rem;">
+            <button class="bg-int-a1">OK</button>
+            <button class="bg-int-white">Cancel</button>
+        </div>
+        <div class="pkt-button-group" style="display: inline-flex;">
+            <span class="pkt-button-square bg-int-p">
+                <pkt-icon set="adwaita" name="media-playback-start"></pkt-icon>
+            </span>
+            <span class="pkt-button-square bg-int-p">
+                <pkt-icon set="adwaita" name="media-playback-stop"></pkt-icon>
+            </span>
+            <span class="pkt-button-square bg-int-c">
+                <pkt-icon set="adwaita" name="media-skip-backward"></pkt-icon>
+            </span>
+            <span class="pkt-button-square bg-int-c">
+                <pkt-icon set="adwaita" name="media-skip-forward"></pkt-icon>
+            </span>
+        </div>
+    </div>
+    <div class="flex">
+        <button class="bg-int-a2" style="font-size: 2rem">Big Button</button>
+    </div>
+</div>
+<h2>Button</h2>
+<hr />
+<p><button>Button</button></p>
+<pre><code class="language-html">&lt;button&gt;button&lt;/button&gt;
+&lt;a class=&quot;button&quot;&gt;button&lt;/a&gt;
+</code></pre>
+<h3>SCSS</h3>
+<pre><code class="language-scss">@use 'path/to/_ui.scss';
+
+button {
+    @include ui.button($bg-color: orange, $radius: 4px);
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Description</th>
+  <th>Example value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>$bg-color</code></td>
+  <td>Background color</td>
+  <td><code>red</code></td>
+</tr>
+<tr>
+  <td><code>$radius</code></td>
+  <td>Border radius</td>
+  <td><code>4px</code></td>
+</tr>
+</tbody>
+</table>
+<h2>Pin</h2>
+<hr />
+<p><span class="pkt-button-pin">+</span></p>
+<pre><code class="language-html">&lt;pkt-button-pin&gt;+&lt;/pkt-button-pin&gt;
+&lt;a class=&quot;pkt-button-pin&quot;&gt;+&lt;/a&gt;
+</code></pre>
+<h3>SCSS</h3>
+<pre><code class="language-scss">@use 'path/to/_ui.scss';
+
+pkt-button-pin {
+    @include ui.button-pin($bg-color: $ui-color);
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Description</th>
+  <th>Example value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>$bg-color</code></td>
+  <td>Background color</td>
+  <td><code>red</code></td>
+</tr>
+</tbody>
+</table>
+<h2>Square Button</h2>
+<hr />
+<p><span class="pkt-button-square">+</span></p>
+<pre><code class="language-html">&lt;pkt-button-square&gt;+&lt;/pkt-button-square&gt;
+&lt;a class=&quot;pkt-button-square&quot;&gt;+&lt;/a&gt;
+</code></pre>
+<h3>SCSS</h3>
+<pre><code class="language-scss">@use 'path/to/_ui.scss';
+
+pkt-button-square {
+    @include ui.button-square($bg-color: $ui-color);
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Description</th>
+  <th>Example value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>$bg-color</code></td>
+  <td>Background color</td>
+  <td><code>red</code></td>
+</tr>
+</tbody>
+</table>
+<h2>Group Button</h2>
+<hr />
+<p>Grouping buttons together. Can apply to <code>button</code> and <code>pkt-button-square</code></p>
+<div class="flex p">
+    <pkt-button-group style="width: 10rem;">
+        <button class="bg-int-a1">OK</button>
+        <button class="bg-int-white">Cancel</button>
+    </pkt-button-group>
+    <pkt-button-group style="margin-left: 2rem;">
+        <pkt-button-square class="bg-int-p">
+            <pkt-icon set="adwaita" name="media-playback-start"></pkt-icon>
+        </pkt-button-square>
+        <pkt-button-square class="bg-int-p">
+            <pkt-icon set="adwaita" name="media-playback-stop"></pkt-icon>
+        </pkt-button-square>
+        <pkt-button-square class="bg-int-c">
+            <pkt-icon set="adwaita" name="media-skip-backward"></pkt-icon>
+        </pkt-button-square>
+        <pkt-button-square class="bg-int-c">
+            <pkt-icon set="adwaita" name="media-skip-forward"></pkt-icon>
+        </pkt-button-square>
+    </pkt-button-group>
+</div>
+<pre><code class="language-html">&lt;pkt-button-group&gt;
+    &lt;button class=&quot;bg-int-a1&quot;&gt;OK&lt;/button&gt;
+    &lt;button class=&quot;bg-int-white&quot;&gt;Cancel&lt;/button&gt;
+&lt;/pkt-button-group&gt;
+&lt;pkt-button-group&gt;
+    &lt;pkt-button-square class=&quot;bg-int-p&quot;&gt;
+        &lt;pkt-icon set=&quot;adwaita&quot; name=&quot;media-playback-start&quot;&gt;&lt;/pkt-icon&gt;
+    &lt;/pkt-button-square&gt;
+    &lt;pkt-button-square class=&quot;bg-int-p&quot;&gt;
+        &lt;pkt-icon set=&quot;adwaita&quot; name=&quot;media-playback-stop&quot;&gt;&lt;/pkt-icon&gt;
+    &lt;/pkt-button-square&gt;
+    &lt;pkt-button-square class=&quot;bg-int-c&quot;&gt;
+        &lt;pkt-icon set=&quot;adwaita&quot; name=&quot;media-skip-backward&quot;&gt;&lt;/pkt-icon&gt;
+    &lt;/pkt-button-square&gt;
+    &lt;pkt-button-square class=&quot;bg-int-c&quot;&gt;
+        &lt;pkt-icon set=&quot;adwaita&quot; name=&quot;media-skip-forward&quot;&gt;&lt;/pkt-icon&gt;
+    &lt;/pkt-button-square&gt;
+&lt;/pkt-button-group&gt;
+</code></pre>
+<h3>SCSS</h3>
+<pre><code class="language-scss">@use 'path/to/_ui.scss';
+
+pkt-button-group {
+    @include ui.button-group($radius: 4px);
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Description</th>
+  <th>Example value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>$radius</code></td>
+  <td>Border radius</td>
+  <td><code>4px</code></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<script>
+var sidebar = null // declare `sidebar` as global variable
+window.addEventListener('load', function () {
+    sidebar = document.querySelector('pkt-sidebar')
+    var sidebar_button = document.querySelector('#sidebar-button');
+    sidebar_button.addEventListener('click', function () {
+        sidebar.show_sidebar();
+    });
+});
+</script>
+
+<div class="pkt-button-pin" id="sidebar-button">
+    <pkt-icon set="adwaita" name="view-dual"></pkt-icon>
+</div>
+<pkt-sidebar id="sidebar" show="1150px">
+    <div el="wrapper">
+        <div el="title" class="bg-a1">
+            <a href="../../../">Packet UI</a>
+            <pkt-button-square onclick="sidebar.hide_sidebar()">
+                <pkt-icon set="adwaita" name="window-close"></pkt-icon>
+            </pkt-button-square>
+        </div>
+        <div el="content">
+            <div class="h">Getting Started</div>
+            <a href="../../../guide/getting-started/#basic-set-up">Basic Setup</a>
+            <a href="../../../guide/getting-started/#usage">Usage</a>
+            <div class="h">Color System</div>
+            <a href="../../../guide/color/pallete.html">Pallete</a>
+            <a href="../../../guide/color/scheme.html">Color Scheme</a>
+            <div class="h">UI Components</div>
+            <a href="../../../guide/components/badge/badge.html">Badge</a>
+            <a href="../../../guide/components/box-arrow/box-arrow.html">Box Arrow</a>
+            <a href="../../../guide/components/button/button.html">Buttons</a>
+            <a href="../../../guide/components/card/card.html">Card</a>
+            <a href="../../../guide/components/checkbox/checkbox.html">Checkbox</a>
+            <a href="../../../guide/components/icon/icon.html">Icon</a>
+            <a href="../../../guide/components/input/input.html">Input</a>
+            <a href="../../../guide/components/menu/menu.html">Menu</a>
+            <a href="../../../guide/components/path/path.html">Path</a>
+            <a href="../../../guide/components/progress/progress.html">Progress</a>
+            <a href="../../../guide/components/sidebar/sidebar.html">Sidebar</a>
+            <a href="../../../guide/components/switch/switch.html">Switch</a>
+            <a href="../../../guide/components/tab/tab.html">Tab</a>
+            <a href="../../../guide/components/table/table.html">Table</a>
+            <a href="../../../guide/components/tag/tag.html">Tag</a>
+        </div>
+    </div>
+    <div el="overlay">
+        <!-- Overlay is dark background over the page. -->
+    </div>
+</pkt-sidebar>
+
+</body>
+</html>

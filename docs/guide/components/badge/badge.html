@@ -1,0 +1,150 @@
+<html>
+<head>
+
+
+<title>Packet UI</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<link rel="stylesheet" href="../../../static/lib/packet-ui/normalize.css?v=25">
+<link rel="stylesheet" href="../../../static/lib/packet-ui/packet-ui.css?v=25">
+<link icon rel="preload" set="adwaita" href="../../../static/lib/adwaita-icon-web/adwaita.svg?v=25" as="image"
+    type="image/svg+xml">
+<link icon rel="preload" set="brand" href="../../../static/asset/icon/brand/symbol-defs.svg?v=25" as="image"
+    type="image/svg+xml">
+<link rel="stylesheet" href="../../../static/lib/highlight.js/atom-one-dark.css?v=25">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36104934-6"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-36104934-6');
+</script>
+<!-- End Google Analytics -->
+<link rel="stylesheet" href="../../../base.css?v=25">
+<script defer src="../../../base.js"></script>
+
+
+
+
+<link rel="stylesheet" href="../../../guide/base.css?v=25">
+<link rel="stylesheet" href="../../../guide/sidebar.css?v=25">
+
+<link rel="stylesheet" href="../../../guide/components/badge/badge.css?v=25">
+
+</head>
+<body>
+
+
+
+<div class="container">
+<h1>Badge</h1>
+<h2>Preview</h2>
+<hr />
+<div id="preview">
+    <div class="size-1">
+        <pkt-badge class="bg-a1">1</pkt-badge>
+        <pkt-badge class="bg-p">10</pkt-badge>
+        <pkt-badge class="bg-a2">100</pkt-badge>
+        <pkt-badge class="bg-t1">1000</pkt-badge>
+        <pkt-badge class="bg-c">+</pkt-badge>
+        <pkt-badge class="bg-t2">-</pkt-badge>
+    </div>
+    <div class="size-2">
+        <pkt-badge class="bg-a1">1</pkt-badge>
+        <pkt-badge class="bg-p">10</pkt-badge>
+        <pkt-badge class="bg-a2">100</pkt-badge>
+        <pkt-badge class="bg-t1">1000</pkt-badge>
+        <pkt-badge class="bg-c">+</pkt-badge>
+        <pkt-badge class="bg-t2">-</pkt-badge>
+    </div>
+    <div class="size-3">
+        <pkt-badge class="bg-a1">1</pkt-badge>
+        <pkt-badge class="bg-p">10</pkt-badge>
+        <pkt-badge class="bg-a2">100</pkt-badge>
+        <pkt-badge class="bg-t1">1000</pkt-badge>
+        <pkt-badge class="bg-c">+</pkt-badge>
+        <pkt-badge class="bg-t2">-</pkt-badge>
+    </div>
+</div>
+<h2>Usage</h2>
+<hr />
+<p><code>&lt;pkt-badge&gt;</code> or <code>class=&quot;pkt-badge&quot;</code>.</p>
+<pre><code class="language-html">&lt;pkt-badge&gt;1&lt;/pkt-badge&gt;
+&lt;span class=&quot;pkt-badge&quot;&gt;&lt;/span&gt;
+</code></pre>
+<h2>Background Color</h2>
+<hr />
+<p>Badge background color can be changed by using packet-ui background color class.</p>
+<pre><code class="language-html">&lt;!-- Example --&gt;
+&lt;pkt-badge class=&quot;bg-amber&quot;&gt;1&lt;/pkt-badge&gt;
+</code></pre>
+<h2>SCSS</h2>
+<hr />
+<pre><code class="language-scss">@use 'path/to/_ui.scss';
+
+pkt-badge {
+    @include badge($bg-color: red);
+}
+</code></pre>
+
+</div>
+
+
+
+<script>
+var sidebar = null // declare `sidebar` as global variable
+window.addEventListener('load', function () {
+    sidebar = document.querySelector('pkt-sidebar')
+    var sidebar_button = document.querySelector('#sidebar-button');
+    sidebar_button.addEventListener('click', function () {
+        sidebar.show_sidebar();
+    });
+});
+</script>
+
+<div class="pkt-button-pin" id="sidebar-button">
+    <pkt-icon set="adwaita" name="view-dual"></pkt-icon>
+</div>
+<pkt-sidebar id="sidebar" show="1150px">
+    <div el="wrapper">
+        <div el="title" class="bg-a1">
+            <a href="../../../">Packet UI</a>
+            <pkt-button-square onclick="sidebar.hide_sidebar()">
+                <pkt-icon set="adwaita" name="window-close"></pkt-icon>
+            </pkt-button-square>
+        </div>
+        <div el="content">
+            <div class="h">Getting Started</div>
+            <a href="../../../guide/getting-started/#basic-set-up">Basic Setup</a>
+            <a href="../../../guide/getting-started/#usage">Usage</a>
+            <div class="h">Color System</div>
+            <a href="../../../guide/color/pallete.html">Pallete</a>
+            <a href="../../../guide/color/scheme.html">Color Scheme</a>
+            <div class="h">UI Components</div>
+            <a href="../../../guide/components/badge/badge.html">Badge</a>
+            <a href="../../../guide/components/box-arrow/box-arrow.html">Box Arrow</a>
+            <a href="../../../guide/components/button/button.html">Buttons</a>
+            <a href="../../../guide/components/card/card.html">Card</a>
+            <a href="../../../guide/components/checkbox/checkbox.html">Checkbox</a>
+            <a href="../../../guide/components/icon/icon.html">Icon</a>
+            <a href="../../../guide/components/input/input.html">Input</a>
+            <a href="../../../guide/components/menu/menu.html">Menu</a>
+            <a href="../../../guide/components/path/path.html">Path</a>
+            <a href="../../../guide/components/progress/progress.html">Progress</a>
+            <a href="../../../guide/components/sidebar/sidebar.html">Sidebar</a>
+            <a href="../../../guide/components/switch/switch.html">Switch</a>
+            <a href="../../../guide/components/tab/tab.html">Tab</a>
+            <a href="../../../guide/components/table/table.html">Table</a>
+            <a href="../../../guide/components/tag/tag.html">Tag</a>
+        </div>
+    </div>
+    <div el="overlay">
+        <!-- Overlay is dark background over the page. -->
+    </div>
+</pkt-sidebar>
+
+</body>
+</html>

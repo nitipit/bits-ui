@@ -1,0 +1,381 @@
+/* Small Screen */
+/* Medium Screen */
+/* Large Screen */
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.c-p {
+  font-family: packet-ui;
+  font-size: 1em;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  user-select: none;
+  display: inline-block;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add background color */
+  /* When the checkbox is checked, add background color */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+.c-p input {
+  opacity: 0;
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  position: absolute;
+  top: 1;
+  left: 0;
+  z-index: 1;
+}
+.c-p span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  background-color: #cccccc;
+  box-shadow: 0 1px 1px 0 #9E9E9E;
+}
+.c-p:hover input ~ span {
+  background-color: #ffdb6d;
+}
+.c-p input:checked ~ span {
+  background-color: #FFC107;
+}
+.c-p span:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.c-p input:checked ~ span:after {
+  display: block;
+}
+.c-p span:after {
+  border: solid black;
+  left: 0.25em;
+  width: 0.3em;
+  height: 0.6em;
+  border-width: 0 0.2em 0.2em 0;
+  transform: rotate(45deg);
+}
+
+.c-a1 {
+  font-family: packet-ui;
+  font-size: 1em;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  user-select: none;
+  display: inline-block;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add background color */
+  /* When the checkbox is checked, add background color */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+.c-a1 input {
+  opacity: 0;
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  position: absolute;
+  top: 1;
+  left: 0;
+  z-index: 1;
+}
+.c-a1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  background-color: #cccccc;
+  box-shadow: 0 1px 1px 0 #9E9E9E;
+}
+.c-a1:hover input ~ span {
+  background-color: #ff926d;
+}
+.c-a1 input:checked ~ span {
+  background-color: #ff4507;
+}
+.c-a1 span:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.c-a1 input:checked ~ span:after {
+  display: block;
+}
+.c-a1 span:after {
+  border: solid white;
+  left: 0.25em;
+  width: 0.3em;
+  height: 0.6em;
+  border-width: 0 0.2em 0.2em 0;
+  transform: rotate(45deg);
+}
+
+.c-a2 {
+  font-family: packet-ui;
+  font-size: 1em;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  user-select: none;
+  display: inline-block;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add background color */
+  /* When the checkbox is checked, add background color */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+.c-a2 input {
+  opacity: 0;
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  position: absolute;
+  top: 1;
+  left: 0;
+  z-index: 1;
+}
+.c-a2 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  background-color: #cccccc;
+  box-shadow: 0 1px 1px 0 #9E9E9E;
+}
+.c-a2:hover input ~ span {
+  background-color: #dbff6d;
+}
+.c-a2 input:checked ~ span {
+  background-color: #c1ff07;
+}
+.c-a2 span:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.c-a2 input:checked ~ span:after {
+  display: block;
+}
+.c-a2 span:after {
+  border: solid black;
+  left: 0.25em;
+  width: 0.3em;
+  height: 0.6em;
+  border-width: 0 0.2em 0.2em 0;
+  transform: rotate(45deg);
+}
+
+.c-t1 {
+  font-family: packet-ui;
+  font-size: 1em;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  user-select: none;
+  display: inline-block;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add background color */
+  /* When the checkbox is checked, add background color */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+.c-t1 input {
+  opacity: 0;
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  position: absolute;
+  top: 1;
+  left: 0;
+  z-index: 1;
+}
+.c-t1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  background-color: #cccccc;
+  box-shadow: 0 1px 1px 0 #9E9E9E;
+}
+.c-t1:hover input ~ span {
+  background-color: #6ddbff;
+}
+.c-t1 input:checked ~ span {
+  background-color: #07c1ff;
+}
+.c-t1 span:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.c-t1 input:checked ~ span:after {
+  display: block;
+}
+.c-t1 span:after {
+  border: solid black;
+  left: 0.25em;
+  width: 0.3em;
+  height: 0.6em;
+  border-width: 0 0.2em 0.2em 0;
+  transform: rotate(45deg);
+}
+
+.c-t2 {
+  font-family: packet-ui;
+  font-size: 1em;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  user-select: none;
+  display: inline-block;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add background color */
+  /* When the checkbox is checked, add background color */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+.c-t2 input {
+  opacity: 0;
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  position: absolute;
+  top: 1;
+  left: 0;
+  z-index: 1;
+}
+.c-t2 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  background-color: #cccccc;
+  box-shadow: 0 1px 1px 0 #9E9E9E;
+}
+.c-t2:hover input ~ span {
+  background-color: #926dff;
+}
+.c-t2 input:checked ~ span {
+  background-color: #4507ff;
+}
+.c-t2 span:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.c-t2 input:checked ~ span:after {
+  display: block;
+}
+.c-t2 span:after {
+  border: solid white;
+  left: 0.25em;
+  width: 0.3em;
+  height: 0.6em;
+  border-width: 0 0.2em 0.2em 0;
+  transform: rotate(45deg);
+}
+
+.c-c {
+  font-family: packet-ui;
+  font-size: 1em;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  user-select: none;
+  display: inline-block;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add background color */
+  /* When the checkbox is checked, add background color */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+.c-c input {
+  opacity: 0;
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  position: absolute;
+  top: 1;
+  left: 0;
+  z-index: 1;
+}
+.c-c span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  background-color: #cccccc;
+  box-shadow: 0 1px 1px 0 #9E9E9E;
+}
+.c-c:hover input ~ span {
+  background-color: #6d92ff;
+}
+.c-c input:checked ~ span {
+  background-color: #0745ff;
+}
+.c-c span:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.c-c input:checked ~ span:after {
+  display: block;
+}
+.c-c span:after {
+  border: solid white;
+  left: 0.25em;
+  width: 0.3em;
+  height: 0.6em;
+  border-width: 0 0.2em 0.2em 0;
+  transform: rotate(45deg);
+}
+
+.size-1 {
+  font-size: 1rem;
+}
+
+.size-2 {
+  font-size: 2rem;
+}
+
+.size-3 {
+  font-size: 3rem;
+}
+
+.size-4 {
+  font-size: 4rem;
+}
+
+/*# sourceMappingURL=checkbox.css.map */

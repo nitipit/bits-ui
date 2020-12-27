@@ -1,0 +1,166 @@
+<html>
+<head>
+
+
+<title>Packet UI</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<link rel="stylesheet" href="../../static/lib/packet-ui/normalize.css?v=25">
+<link rel="stylesheet" href="../../static/lib/packet-ui/packet-ui.css?v=25">
+<link icon rel="preload" set="adwaita" href="../../static/lib/adwaita-icon-web/adwaita.svg?v=25" as="image"
+    type="image/svg+xml">
+<link icon rel="preload" set="brand" href="../../static/asset/icon/brand/symbol-defs.svg?v=25" as="image"
+    type="image/svg+xml">
+<link rel="stylesheet" href="../../static/lib/highlight.js/atom-one-dark.css?v=25">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36104934-6"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-36104934-6');
+</script>
+<!-- End Google Analytics -->
+<link rel="stylesheet" href="../../base.css?v=25">
+<script defer src="../../base.js"></script>
+
+
+
+
+<link rel="stylesheet" href="../../guide/base.css?v=25">
+<link rel="stylesheet" href="../../guide/sidebar.css?v=25">
+
+<link rel="stylesheet" href="../../guide/color/scheme.css?v=25">
+
+</head>
+<body>
+
+
+
+<div class="container" style="margin-top: 2rem;">
+<h1>Color Scheme</h1>
+<p>Packet UI generates color scheme from primary color (analog, triadic, complement
+and monochrome). The default primary color is <span class="pkt-tag">amber</span></p>
+<p>To use analog and triadic color:</p>
+<ul>
+<li>Apply class <code>color-{p, a1, a2, c, t1, t2}</code> for font and icon color.</li>
+<li>Apply class <code>bg-{p, a1, a2, c, t1, t2}</code> for background.</li>
+<li>Apply class <code>bg-int-{p, a1, a2, c, t1, t2}</code> for interactive background color.</li>
+</ul>
+<p>Analog and Triadic color:</p>
+<div class="flex">
+    <pkt-tag class="bg-a1">alalog left</pkt-tag>
+    <pkt-tag class="bg-p">primary</pkt-tag>
+    <pkt-tag class="bg-a2">alalog right</pkt-tag>
+    <pkt-tag class="bg-t1">triadic left</pkt-tag>
+    <pkt-tag class="bg-c">complement</pkt-tag>
+    <pkt-tag class="bg-t2">triadic right</pkt-tag>
+</div>
+<pre><code class="language-html">&lt;pkt-tag class=&quot;bg-a1&quot;&gt;alalog left&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-p&quot;&gt;primary&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-a2&quot;&gt;alalog right&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-t1&quot;&gt;triadic left&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-c&quot;&gt;complement&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-t2&quot;&gt;triadic right&lt;/pkt-tag&gt;
+</code></pre>
+<p>Interactive Background Color:</p>
+<div class="flex">
+    <pkt-tag class="bg-int-red">red</pkt-tag>
+    <pkt-tag class="bg-int-orange">orange</pkt-tag>
+    <pkt-tag class="bg-int-yellow">yellow</pkt-tag>
+    <pkt-tag class="bg-int-green">green</pkt-tag>
+    <pkt-tag class="bg-int-blue">blue</pkt-tag>
+    <pkt-tag class="bg-int-purple">purple</pkt-tag>
+</div>
+<pre><code class="language-html">&lt;pkt-tag class=&quot;bg-int-red&quot;&gt;red&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-int-orange&quot;&gt;orange&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-int-yellow&quot;&gt;yellow&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-int-green&quot;&gt;green&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-int-blue&quot;&gt;blue&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-int-purple&quot;&gt;purple&lt;/pkt-tag&gt;
+</code></pre>
+<p>Monochrome for primary color):</p>
+<div class="flex">
+    <pkt-tag class="bg-p d4">darken 4</pkt-tag>
+    <pkt-tag class="bg-p d3">darken 3</pkt-tag>
+    <pkt-tag class="bg-p d2">darken 2</pkt-tag>
+    <pkt-tag class="bg-p d1">darken 1</pkt-tag>
+    <pkt-tag class="bg-p">primary</pkt-tag>
+    <pkt-tag class="bg-p l1">lighten 1</pkt-tag>
+    <pkt-tag class="bg-p l2">lighten 2</pkt-tag>
+    <pkt-tag class="bg-p l3">lighten 3</pkt-tag>
+    <pkt-tag class="bg-p l4">lighten 4</pkt-tag>
+</div>
+<pre><code class="language-html">&lt;pkt-tag class=&quot;bg-p d4&quot;&gt;darken 4&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-p d3&quot;&gt;darken 3&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-p d2&quot;&gt;darken 2&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-p d1&quot;&gt;darken 1&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-p&quot;&gt;primary&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-p l1&quot;&gt;lighten 1&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-p l2&quot;&gt;lighten 2&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-p l3&quot;&gt;lighten 3&lt;/pkt-tag&gt;
+&lt;pkt-tag class=&quot;bg-p l4&quot;&gt;lighten 4&lt;/pkt-tag&gt;
+</code></pre>
+<h1>Change Primary Color ?</h1>
+<p>The primary color can be changed by using <code>node_modules/packet-ui/src/style/_var.scss</code>.</p>
+
+</div>
+
+
+
+<script>
+var sidebar = null // declare `sidebar` as global variable
+window.addEventListener('load', function () {
+    sidebar = document.querySelector('pkt-sidebar')
+    var sidebar_button = document.querySelector('#sidebar-button');
+    sidebar_button.addEventListener('click', function () {
+        sidebar.show_sidebar();
+    });
+});
+</script>
+
+<div class="pkt-button-pin" id="sidebar-button">
+    <pkt-icon set="adwaita" name="view-dual"></pkt-icon>
+</div>
+<pkt-sidebar id="sidebar" show="1150px">
+    <div el="wrapper">
+        <div el="title" class="bg-a1">
+            <a href="../../">Packet UI</a>
+            <pkt-button-square onclick="sidebar.hide_sidebar()">
+                <pkt-icon set="adwaita" name="window-close"></pkt-icon>
+            </pkt-button-square>
+        </div>
+        <div el="content">
+            <div class="h">Getting Started</div>
+            <a href="../../guide/getting-started/#basic-set-up">Basic Setup</a>
+            <a href="../../guide/getting-started/#usage">Usage</a>
+            <div class="h">Color System</div>
+            <a href="../../guide/color/pallete.html">Pallete</a>
+            <a href="../../guide/color/scheme.html">Color Scheme</a>
+            <div class="h">UI Components</div>
+            <a href="../../guide/components/badge/badge.html">Badge</a>
+            <a href="../../guide/components/box-arrow/box-arrow.html">Box Arrow</a>
+            <a href="../../guide/components/button/button.html">Buttons</a>
+            <a href="../../guide/components/card/card.html">Card</a>
+            <a href="../../guide/components/checkbox/checkbox.html">Checkbox</a>
+            <a href="../../guide/components/icon/icon.html">Icon</a>
+            <a href="../../guide/components/input/input.html">Input</a>
+            <a href="../../guide/components/menu/menu.html">Menu</a>
+            <a href="../../guide/components/path/path.html">Path</a>
+            <a href="../../guide/components/progress/progress.html">Progress</a>
+            <a href="../../guide/components/sidebar/sidebar.html">Sidebar</a>
+            <a href="../../guide/components/switch/switch.html">Switch</a>
+            <a href="../../guide/components/tab/tab.html">Tab</a>
+            <a href="../../guide/components/table/table.html">Table</a>
+            <a href="../../guide/components/tag/tag.html">Tag</a>
+        </div>
+    </div>
+    <div el="overlay">
+        <!-- Overlay is dark background over the page. -->
+    </div>
+</pkt-sidebar>
+
+</body>
+</html>

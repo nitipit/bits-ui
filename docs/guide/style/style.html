@@ -1,0 +1,143 @@
+<html>
+<head>
+
+
+<title>Packet UI</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<link rel="stylesheet" href="static/lib/packet-ui/normalize.css?v=25">
+<link rel="stylesheet" href="static/lib/packet-ui/packet-ui.css?v=25">
+<link icon rel="preload" set="adwaita" href="static/lib/adwaita-icon-web/adwaita.svg?v=25" as="image"
+    type="image/svg+xml">
+<link icon rel="preload" set="brand" href="static/asset/icon/brand/symbol-defs.svg?v=25" as="image"
+    type="image/svg+xml">
+<link rel="stylesheet" href="static/lib/highlight.js/atom-one-dark.css?v=25">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36104934-6"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-36104934-6');
+</script>
+<!-- End Google Analytics -->
+<link rel="stylesheet" href="base.css?v=25">
+<script defer src="base.js"></script>
+
+<link rel="stylesheet" href="/bits-ui/static/template/guide/style/style.css?v=25">
+
+</head>
+<body>
+
+<div class="container" style="margin-top: 2rem;">
+<h1 style="margin:0; border: 0; text-align: center;">Stylus Mixins</h1>
+<p>Using stylus function/mixin is the recommend way to change or customize tag style.
+Just use <code>@require 'node_modules/bits-ui/src/stylus/_require'</code> then all variables and functions will be ready to use.</p>
+<p>Let's see stylus function/mixin for <tag>box-arrow</tag></p>
+<pre><code class="language-stylus">@require 'node_modules/bits-ui/src/stylus/_require'
+
+// Stylus function for bits-box-arrow-top
+bits-box-arrow-top
+    box-arrow(
+        $arrow=top,
+        $arrow-size=7px,
+        $bg-color=lighten(grey, 80%),
+        $border-width=1px,
+        $border-color=black,
+        $radius=$border-radius)
+</code></pre>
+<p>For example, to customize <code>bits-box-arrow-top</code> css
+to change arrow size and background color.</p>
+<pre><code class="language-stylus">// file: box-arrow.styl
+@require 'node_modules/bits-ui/src/stylus/_require'
+
+bits-box-arrow-top
+    box-arrow(
+        $arrow-size: 1em,
+        $bg-color: $color-p)
+</code></pre>
+<p>Compile stylus to CSS, then load use it in web page.</p>
+<pre><code class="language-bash">$ stylus box-arrow.styl
+</code></pre>
+<pre><code class="language-html">&lt;!-- &lt;head&gt; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;box-arrow.css&quot;&gt;
+
+&lt;!-- &lt;body&gt; --&gt;
+&lt;bits-box-arrow-top&gt;
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it
+    to make a type specimen book. It has survived not only five centuries,
+    but also the leap into electronic typesetting, remaining essentially unchanged.
+&lt;/bits-box-arrow-top&gt;
+</code></pre>
+<div class="p" style="margin-top: 2rem;">
+    <bits-box-arrow-top>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it
+        to make a type specimen book. It has survived not only five centuries,
+        but also the leap into electronic typesetting, remaining essentially unchanged.
+    </bits-box-arrow-top>
+</div>
+
+</div>
+
+
+
+<script>
+var sidebar = null // declare `sidebar` as global variable
+window.addEventListener('load', function () {
+    sidebar = document.querySelector('pkt-sidebar')
+    var sidebar_button = document.querySelector('#sidebar-button');
+    sidebar_button.addEventListener('click', function () {
+        sidebar.show_sidebar();
+    });
+});
+</script>
+
+<div class="pkt-button-pin" id="sidebar-button">
+    <pkt-icon set="adwaita" name="view-dual"></pkt-icon>
+</div>
+<pkt-sidebar id="sidebar" show="1150px">
+    <div el="wrapper">
+        <div el="title" class="bg-a1">
+            <a href="">Packet UI</a>
+            <pkt-button-square onclick="sidebar.hide_sidebar()">
+                <pkt-icon set="adwaita" name="window-close"></pkt-icon>
+            </pkt-button-square>
+        </div>
+        <div el="content">
+            <div class="h">Getting Started</div>
+            <a href="guide/getting-started/#basic-set-up">Basic Setup</a>
+            <a href="guide/getting-started/#usage">Usage</a>
+            <div class="h">Color System</div>
+            <a href="guide/color/pallete.html">Pallete</a>
+            <a href="guide/color/scheme.html">Color Scheme</a>
+            <div class="h">UI Components</div>
+            <a href="guide/components/badge/badge.html">Badge</a>
+            <a href="guide/components/box-arrow/box-arrow.html">Box Arrow</a>
+            <a href="guide/components/button/button.html">Buttons</a>
+            <a href="guide/components/card/card.html">Card</a>
+            <a href="guide/components/checkbox/checkbox.html">Checkbox</a>
+            <a href="guide/components/icon/icon.html">Icon</a>
+            <a href="guide/components/input/input.html">Input</a>
+            <a href="guide/components/menu/menu.html">Menu</a>
+            <a href="guide/components/path/path.html">Path</a>
+            <a href="guide/components/progress/progress.html">Progress</a>
+            <a href="guide/components/sidebar/sidebar.html">Sidebar</a>
+            <a href="guide/components/switch/switch.html">Switch</a>
+            <a href="guide/components/tab/tab.html">Tab</a>
+            <a href="guide/components/table/table.html">Table</a>
+            <a href="guide/components/tag/tag.html">Tag</a>
+        </div>
+    </div>
+    <div el="overlay">
+        <!-- Overlay is dark background over the page. -->
+    </div>
+</pkt-sidebar>
+
+</body>
+</html>

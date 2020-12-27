@@ -1,0 +1,14 @@
+/* Small Screen */
+/* Medium Screen */
+/* Large Screen */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=input.css.map */

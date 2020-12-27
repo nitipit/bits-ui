@@ -1,0 +1,141 @@
+/* Small Screen */
+/* Medium Screen */
+/* Large Screen */
+div[data-id=preview] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div[data-id=preview] pkt-switch {
+  margin: 0.5rem;
+}
+div[data-id=preview] pkt-switch.color-p {
+  font-family: packet-ui;
+  font-size: 1em;
+  display: inline-flex;
+  font-weight: bold;
+  width: 4.5em;
+  height: 1.5em;
+  align-items: center;
+  position: relative;
+}
+div[data-id=preview] pkt-switch.color-p input[type=checkbox] {
+  /* Hide default HTML checkbox */
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+div[data-id=preview] pkt-switch.color-p div[el=label] {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.2em;
+  background-color: #e0e0e0;
+  box-shadow: 0px 1px 2px 0px #4d4d4d;
+  transition: 0.4s;
+  align-items: center;
+  text-align: center;
+}
+div[data-id=preview] pkt-switch.color-p div[el=label] > span {
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+div[data-id=preview] pkt-switch.color-p div[el=label] > span:first-of-type {
+  color: black;
+}
+div[data-id=preview] pkt-switch.color-p div[el=label] > span:last-of-type {
+  color: black;
+}
+div[data-id=preview] pkt-switch.color-p div[el=paddle] {
+  box-sizing: border-box;
+  position: absolute;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  border: 1px solid #9E9E9E;
+  border-radius: 0.2em;
+  background-color: white;
+  transition: 0.2s;
+  top: 0;
+  left: 0;
+}
+div[data-id=preview] pkt-switch.color-p input[type=checkbox]:checked ~ div[el=label] {
+  background-color: #FFC107;
+}
+div[data-id=preview] pkt-switch.color-p input[type=checkbox]:checked ~ div[el=paddle] {
+  transform: translate(101%, 0);
+  will-change: transform;
+}
+div[data-id=preview] pkt-switch.color-a2 {
+  font-family: packet-ui;
+  font-size: 1em;
+  display: inline-flex;
+  font-weight: bold;
+  width: 4.5em;
+  height: 1.5em;
+  align-items: center;
+  position: relative;
+}
+div[data-id=preview] pkt-switch.color-a2 input[type=checkbox] {
+  /* Hide default HTML checkbox */
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+div[data-id=preview] pkt-switch.color-a2 div[el=label] {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.2em;
+  background-color: #e0e0e0;
+  box-shadow: 0px 1px 2px 0px #4d4d4d;
+  transition: 0.4s;
+  align-items: center;
+  text-align: center;
+}
+div[data-id=preview] pkt-switch.color-a2 div[el=label] > span {
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+div[data-id=preview] pkt-switch.color-a2 div[el=label] > span:first-of-type {
+  color: black;
+}
+div[data-id=preview] pkt-switch.color-a2 div[el=label] > span:last-of-type {
+  color: black;
+}
+div[data-id=preview] pkt-switch.color-a2 div[el=paddle] {
+  box-sizing: border-box;
+  position: absolute;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  border: 1px solid #9E9E9E;
+  border-radius: 0.2em;
+  background-color: white;
+  transition: 0.2s;
+  top: 0;
+  left: 0;
+}
+div[data-id=preview] pkt-switch.color-a2 input[type=checkbox]:checked ~ div[el=label] {
+  background-color: #c1ff07;
+}
+div[data-id=preview] pkt-switch.color-a2 input[type=checkbox]:checked ~ div[el=paddle] {
+  transform: translate(101%, 0);
+  will-change: transform;
+}
+
+/*# sourceMappingURL=switch.css.map */

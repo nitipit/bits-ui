@@ -1,0 +1,21 @@
+#preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+#preview pkt-icon {
+  padding: 1rem;
+}
+#preview .size-1 {
+  font-size: 2rem;
+}
+#preview .size-2 {
+  font-size: 3rem;
+}
+#preview .size-3 {
+  font-size: 4rem;
+}
+
+/*# sourceMappingURL=icon.css.map */

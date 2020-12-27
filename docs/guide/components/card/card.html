@@ -1,0 +1,170 @@
+<html>
+<head>
+
+
+<title>Packet UI</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<link rel="stylesheet" href="../../../static/lib/packet-ui/normalize.css?v=25">
+<link rel="stylesheet" href="../../../static/lib/packet-ui/packet-ui.css?v=25">
+<link icon rel="preload" set="adwaita" href="../../../static/lib/adwaita-icon-web/adwaita.svg?v=25" as="image"
+    type="image/svg+xml">
+<link icon rel="preload" set="brand" href="../../../static/asset/icon/brand/symbol-defs.svg?v=25" as="image"
+    type="image/svg+xml">
+<link rel="stylesheet" href="../../../static/lib/highlight.js/atom-one-dark.css?v=25">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36104934-6"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-36104934-6');
+</script>
+<!-- End Google Analytics -->
+<link rel="stylesheet" href="../../../base.css?v=25">
+<script defer src="../../../base.js"></script>
+
+
+
+
+<link rel="stylesheet" href="../../../guide/base.css?v=25">
+<link rel="stylesheet" href="../../../guide/sidebar.css?v=25">
+
+<link rel="stylesheet" href="../../../guide/components/card/card.css?v=25">
+
+</head>
+<body>
+
+
+
+<div class="container">
+<h1>Card</h1>
+<h2>Preview</h2>
+<hr />
+<div style="display: flex; justify-content:center;">
+    <pkt-card style="width: 90%; max-width: 450px;">
+        <h2 class="bg-a1 border-top-radius">Dessert</h2>
+        <img src="/guide/components/card/dessert.jpg">
+        <p>
+            A whole batch of basic vanilla cupcakes, topped with the best
+            buttercream I’ve ever ever. If you don’t know how to make anything
+            else in your life, at very least, perfect the vanilla cupcake.
+        </p>
+        <pkt-button-group>
+            <button class="bg-int-p">
+                <pkt-icon set="adwaita" name="emblem-favorite"></pkt-icon>
+            </button>
+            <button class="bg-int-p">
+                <pkt-icon set="adwaita" name="emblem-shared"></pkt-icon>
+            </button>
+        </pkt-button-group>
+    </pkt-card>
+</div>
+<h2>Usage</h2>
+<hr />
+<pre><code class="language-html">&lt;pkt-card&gt;
+    &lt;h2 class=&quot;bg-a1 border-top-radius&quot;&gt;Dessert&lt;/h2&gt;
+    &lt;img src=&quot;dessert.jpg&quot;&gt;
+    &lt;p&gt;
+        A whole batch of basic vanilla cupcakes, topped with the best
+        buttercream I’ve ever ever. If you don’t know how to make anything
+        else in your life, at very least, perfect the vanilla cupcake.
+    &lt;/p&gt;
+    &lt;pkt-button-group&gt;
+        &lt;button class=&quot;bg-int-p&quot;&gt;
+            &lt;pkt-icon set=&quot;adwaita&quot; name=&quot;emblem-favorite&quot;&gt;&lt;/pkt-icon&gt;
+        &lt;/button&gt;
+        &lt;button class=&quot;bg-int-p&quot;&gt;
+            &lt;pkt-icon set=&quot;adwaita&quot; name=&quot;emblem-shared&quot;&gt;&lt;/pkt-icon&gt;
+        &lt;/button&gt;
+    &lt;/pkt-button-group&gt;
+&lt;/pkt-card&gt;
+</code></pre>
+<blockquote>
+<p><pkt-icon set="adwaita" name="dialog-information"></pkt-icon> CSS UI class <code>border-top-radius</code> or <code>border-bottom-radius</code> can be used to make round corner for elements inside.</p>
+</blockquote>
+<h2>SCSS</h2>
+<hr />
+<pre><code class="language-scss">@use 'path/to/_ui.scss';
+
+pkt-card {
+    @include ui.card($radius: 4px);
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+  <th>Argument</th>
+  <th>Description</th>
+  <th>Example value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>$radius</code></td>
+  <td>border radius</td>
+  <td><code>4px</code> <code>1em</code></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<script>
+var sidebar = null // declare `sidebar` as global variable
+window.addEventListener('load', function () {
+    sidebar = document.querySelector('pkt-sidebar')
+    var sidebar_button = document.querySelector('#sidebar-button');
+    sidebar_button.addEventListener('click', function () {
+        sidebar.show_sidebar();
+    });
+});
+</script>
+
+<div class="pkt-button-pin" id="sidebar-button">
+    <pkt-icon set="adwaita" name="view-dual"></pkt-icon>
+</div>
+<pkt-sidebar id="sidebar" show="1150px">
+    <div el="wrapper">
+        <div el="title" class="bg-a1">
+            <a href="../../../">Packet UI</a>
+            <pkt-button-square onclick="sidebar.hide_sidebar()">
+                <pkt-icon set="adwaita" name="window-close"></pkt-icon>
+            </pkt-button-square>
+        </div>
+        <div el="content">
+            <div class="h">Getting Started</div>
+            <a href="../../../guide/getting-started/#basic-set-up">Basic Setup</a>
+            <a href="../../../guide/getting-started/#usage">Usage</a>
+            <div class="h">Color System</div>
+            <a href="../../../guide/color/pallete.html">Pallete</a>
+            <a href="../../../guide/color/scheme.html">Color Scheme</a>
+            <div class="h">UI Components</div>
+            <a href="../../../guide/components/badge/badge.html">Badge</a>
+            <a href="../../../guide/components/box-arrow/box-arrow.html">Box Arrow</a>
+            <a href="../../../guide/components/button/button.html">Buttons</a>
+            <a href="../../../guide/components/card/card.html">Card</a>
+            <a href="../../../guide/components/checkbox/checkbox.html">Checkbox</a>
+            <a href="../../../guide/components/icon/icon.html">Icon</a>
+            <a href="../../../guide/components/input/input.html">Input</a>
+            <a href="../../../guide/components/menu/menu.html">Menu</a>
+            <a href="../../../guide/components/path/path.html">Path</a>
+            <a href="../../../guide/components/progress/progress.html">Progress</a>
+            <a href="../../../guide/components/sidebar/sidebar.html">Sidebar</a>
+            <a href="../../../guide/components/switch/switch.html">Switch</a>
+            <a href="../../../guide/components/tab/tab.html">Tab</a>
+            <a href="../../../guide/components/table/table.html">Table</a>
+            <a href="../../../guide/components/tag/tag.html">Tag</a>
+        </div>
+    </div>
+    <div el="overlay">
+        <!-- Overlay is dark background over the page. -->
+    </div>
+</pkt-sidebar>
+
+</body>
+</html>

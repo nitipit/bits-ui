@@ -1,0 +1,9 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex pkt-tag {
+  margin: 2px;
+}
+
+/*# sourceMappingURL=scheme.css.map */

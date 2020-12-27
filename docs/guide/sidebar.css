@@ -1,0 +1,58 @@
+/* Small Screen */
+/* Medium Screen */
+/* Large Screen */
+#sidebar-button {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.25rem;
+  z-index: 100;
+}
+
+pkt-sidebar [el=wrapper] {
+  width: 260px;
+}
+pkt-sidebar [el=title] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+pkt-sidebar [el=title] a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+}
+pkt-sidebar [el=title] pkt-button-square {
+  font-size: 1.5rem;
+  border-radius: 0;
+  background-color: #0745ff;
+  color: white;
+}
+pkt-sidebar [el=title] pkt-button-square:hover {
+  background-color: #3a6bff;
+}
+pkt-sidebar [el=title] pkt-button-square:active {
+  background-color: #0b3ac8;
+}
+pkt-sidebar [el=content] {
+  padding-left: 0.5rem;
+  padding-bottom: 5rem;
+}
+pkt-sidebar [el=content] .h {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+pkt-sidebar [el=content] a {
+  display: block;
+  width: 100%;
+  padding: 0 0.5rem;
+  text-decoration: none;
+}
+pkt-sidebar [el=content] a:hover {
+  background-color: red;
+}
+
+/*# sourceMappingURL=sidebar.css.map */

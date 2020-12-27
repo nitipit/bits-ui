@@ -1,0 +1,218 @@
+<html>
+<head>
+
+
+<title>Packet UI</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<link rel="stylesheet" href="./static/lib/packet-ui/normalize.css?v=25">
+<link rel="stylesheet" href="./static/lib/packet-ui/packet-ui.css?v=25">
+<link icon rel="preload" set="adwaita" href="./static/lib/adwaita-icon-web/adwaita.svg?v=25" as="image"
+    type="image/svg+xml">
+<link icon rel="preload" set="brand" href="./static/asset/icon/brand/symbol-defs.svg?v=25" as="image"
+    type="image/svg+xml">
+<link rel="stylesheet" href="./static/lib/highlight.js/atom-one-dark.css?v=25">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36104934-6"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-36104934-6');
+</script>
+<!-- End Google Analytics -->
+<link rel="stylesheet" href="./base.css?v=25">
+<script defer src="./base.js"></script>
+
+<link rel="stylesheet" href="./index.css?v=25">
+
+</head>
+<body>
+
+<div id="highlight" class="bg-p">
+    <pkt-tag class="bg-a1" style="padding: 0 0.5rem;">
+        <h1>Packet UI</h1>
+    </pkt-tag>
+    <h2 style="width: 100%; text-align: center;">
+        Simple and elegant <strong class="color-c">User Interface</strong><br>
+        with <strong class="color-t2">&lt;Web Components/&gt;</strong> and
+        <strong class="color-t2">CSS</strong>
+    </h2>
+    <div>
+        <a class="button bg-int-c" href="./guide/getting-started/">
+            <pkt-icon set="adwaita" name="view-dual"></pkt-icon>
+            <span style="margin-left: 0.2rem;">Guide</span>
+        </a>
+        <a class="button" el="github" href="https://github.com/nitipit/pkt-ui">
+            <pkt-icon set="brand" name="github"></pkt-icon>
+            <span style="margin-left: 0.2rem;">Github</span>
+        </a>
+    </div>
+</div>
+
+<div id="sample" class="container">
+    <pkt-card>
+        <table style="margin: 0.5rem;">
+            <tr>
+                <td>badge</td>
+                <td>
+                    <pkt-badge>10</pkt-badge>
+                </td>
+            </tr>
+            <tr>
+                <td>checkbox</td>
+                <td>
+                    <pkt-checkbox>
+                        <input type="checkbox" name="demo">
+                    </pkt-checkbox>
+                </td>
+            </tr>
+            <tr>
+                <td>button</td>
+                <td><button>Submit</button></td>
+            </tr>
+            <tr>
+                <td>switch</td>
+                <td>
+                    <pkt-switch>
+                        <input type="checkbox">
+                        <div el="label">
+                            <span>ON</span>
+                            <span>OFF</span>
+                        </div>
+                    </pkt-switch>
+                </td>
+            </tr>
+            <tr>
+                <td>input-number</td>
+                <td>
+                    <pkt-input-number>
+                        <input type="number" min="0" max="100">
+                    </pkt-input-number>
+                </td>
+            </tr>
+            <tr>
+                <td>dotpulse</td>
+                <td>
+                    <pkt-dotpulse></pkt-dotpulse>
+                </td>
+            </tr>
+        </table>
+        <button class="bg-int-a1" style="text-align: center;">and much more...</button>
+    </pkt-card>
+</div>
+
+<div class="container markdown">
+    <h2>Basic Set Up</h2>
+<p>To use default style and color, just put codes below in html <code>&lt;head&gt;</code> and you're good to go.</p>
+<pre><code class="language-html">&lt;head&gt;
+    &lt;!-- Load default CSS --&gt;
+    &lt;link rel=&quot;stylesheet&quot;
+        href=&quot;https://cdn.jsdelivr.net/npm/packet-ui@1.0.0/dist/normalize.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot;
+        href=&quot;https://cdn.jsdelivr.net/npm/packet-ui@1.0.0/dist/packet-ui.css&quot;&gt;
+
+    &lt;!-- Load packet-ui.js --&gt;
+    &lt;script defer src=&quot;https://cdn.jsdelivr.net/npm/packet-ui@1.0.0/dist/packet-ui.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Set up font for UI components. Cantarell is recommended --&gt;
+    &lt;style&gt;
+    @font-face {
+        font-family: 'packet-ui';
+        src: url('https://fonts.gstatic.com/s/cantarell/v10/B50NF7ZDq37KMUvlO015jKJr.woff2') format('woff2');
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+</code></pre>
+<h2>Usage</h2>
+<p>Use web components <code>&lt;pkt-*&gt;</code> anywhere in html <code>&lt;body&gt;</code>, for examples:</p>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;pkt-badge&gt;&lt;/pkt-badge&gt;
+    &lt;pkt-switch&gt;&lt;/pkt-switch&gt;
+&lt;/body&gt;
+</code></pre>
+
+</div>
+
+<div id="features">
+    <div class="container">
+        <h2>Features</h2>
+        <div class="row">
+            <pkt-card>
+                <h3>&lt;Web Components/&gt;</h3>
+                <p>
+                    UI Components are based on
+                    <a href="https://webcomponents.org"><strong>Web Components</strong></a>
+                    standards which works across modern browsers, and can be used
+                    with any JavaScript library or framework that works with HTML.
+
+                </p>
+            </pkt-card>
+        </div>
+        <div class="row">
+            <pkt-card>
+                <h3>CSS Framework (SASS)</h3>
+                <p>
+                    Provides CSS Framework (SASS) which contains variables
+                    and modules for customization.
+                </p>
+            </pkt-card>
+        </div>
+        <div class="row">
+            <pkt-card el="icon-system">
+                <h3>Icon System</h3>
+                <p>
+                    With icon system and <code>&lt;pkt-icon&gt;</code> component,
+                    you can easily use icon from <strong>svg symbols</strong> with
+                    namespaces to combine variety of icon set.
+                </p>
+                <pkt-button-group el="icons">
+                    <button>
+                        <pkt-icon set="adwaita" name="airplane-mode"></pkt-icon>
+                    </button>
+                    <button>
+                        <pkt-icon set="adwaita" name="battery-level-20-charging"></pkt-icon>
+                    </button>
+                    <button>
+                        <pkt-icon set="adwaita" name="printer-error"></pkt-icon>
+                    </button>
+                    <button>
+                        <pkt-icon set="adwaita" name="user-offline"></pkt-icon>
+                    </button>
+                    <button>
+                        <pkt-icon set="adwaita" name="mail-unread"></pkt-icon>
+                    </button>
+                    <button>
+                        <pkt-icon set="adwaita" name="display-brightness"></pkt-icon>
+                    </button>
+                </pkt-button-group>
+            </pkt-card>
+        </div>
+        <div class="row">
+            <pkt-card>
+                <h3>Color System</h3>
+                <p>
+                    Built-in color system to make and modified color scheme.
+                </p>
+                <pkt-button-group>
+                    <button class="bg-int-a1"">A1</button>
+                    <button class="bg-int-p">P</button>
+                    <button class="bg-int-a2">A2</button>
+                    <button class="bg-int-t1">T1</button>
+                    <button class="bg-int-c">C</button>
+                    <button class="bg-int-t2">T2</button>
+                </pkt-button-group>
+            </pkt-card>
+        </div>
+    </div>
+</div>
+
+<div data-id="footer" style="margin-top: 10rem; height: 2rem;"></div>
+
+
+
+
+</body>
+</html>
