@@ -1,0 +1,40 @@
+@use "sass:color";
+@use "sass:map";
+@use "pallete";
+
+$color-primary: pallete.$amber !default;
+$saturate: 0% !default;
+$hue-distance: 30 !default;
+
+$scheme: (
+    color-primary: $color-primary,
+    color-complement: color.adjust($color-primary,
+        $hue: 180,
+        $saturation: $saturate
+    ),
+    color-analog-left: color.adjust($color-primary,
+        $hue: -($hue-distance),
+        $saturation: $saturate
+    ),
+    color-analog-right: color.adjust($color-primary,
+        $hue: $hue-distance,
+        $saturation: $saturate
+    ),
+    color-triadic-left: color.adjust($color-primary,
+        $hue: 180 - ($hue-distance),
+        $saturation: $saturate
+    ),
+    color-triadic-right: color.adjust($color-primary,
+        $hue: 180 + ($hue-distance),
+        $saturation: $saturate
+    )
+);
+
+$scheme: map.merge($scheme, (
+    color-p: map.get($scheme, color-primary),
+    color-c: map.get($scheme, color-complement),
+    color-a1: map.get($scheme, color-analog-left),
+    color-a2: map.get($scheme, color-analog-right),
+    color-t1: map.get($scheme, color-triadic-left),
+    color-t2: map.get($scheme, color-triadic-right)
+));

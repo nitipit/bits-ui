@@ -1,8 +1,33 @@
-@use 'style/_var';
+@use 'sass:map';
+@use 'style/_pallete';
 
-@each $name, $value in var {
-    @debug "#{$name} : #{$value}";
-}
-// @use 'default';
-// @use 'typography';
-// @use 'ui-class';
+$color-primary: map.get(pallete.$pallete, amber) !default;
+$saturate: 0% !default;
+$hue-distance: 30 !default;
+
+$ui-color: $color-primary !default;
+$border-radius: 4px !default;
+
+/* Small Screen */
+$sm: 'screen and (max-width: 39.9375em)' !default;
+
+/* Medium Screen */
+$md: 'screen and (min-width: 40em) and (max-width: 63.9375em)' !default;
+
+/* Large Screen */
+$lg: 'screen and (min-width: 64em)' !default;
+
+@use 'style/_scheme' with (
+    $color-primary: $color-primary
+);
+
+@use '_default' with (
+    $ui-color: $ui-color,
+    $border-radius: $border-radius
+);
+@use '_typography';
+@use '_ui-class' with (
+    $pallete: pallete.$pallete,
+    $scheme: scheme.$scheme,
+    $border-radius: $border-radius
+)

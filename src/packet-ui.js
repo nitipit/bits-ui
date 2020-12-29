@@ -2,7 +2,6 @@ import * as ui from './ui/ui.js';
 
 customElements.define('pkt-checkbox', ui.Checkbox);
 customElements.define('pkt-dotpulse', ui.DotPulse);
-customElements.define('pkt-file', ui.File);
 customElements.define('pkt-input-number', ui.InputNumber);
 customElements.define('pkt-input-radio', ui.InputRadio);
 customElements.define('pkt-input-tag', ui.InputTag);

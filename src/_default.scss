@@ -1,36 +1,37 @@
 @use 'style/_mixin';
 @use "ui/_ui";
 
-$var: null !default;
+$ui-color: null !default;
+$border-radius: null !default;
 
 pkt-badge, .pkt-badge {
-    @include ui.badge($bg-color: $var.$ui-color)
+    @include ui.badge($bg-color: $ui-color)
 }
 
 pkt-box-arrow-top, .pkt-box-arrow-top {
     @include ui.box-arrow(
         $arrow: "top",
-        $radius: $var.$border-radius
+        $radius: $border-radius
     );
 }
 
 pkt-box-arrow-right, .pkt-box-arrow-right {
     @include ui.box-arrow(
         $arrow: "right",
-        $radius: $var.$border-radius
+        $radius: $border-radius
     );
 }
 
 pkt-box-arrow-bottom, .pkt-box-arrow-bottom {
     @include ui.box-arrow(
         $arrow: "bottom",
-        $radius: $var.$border-radius);
+        $radius: $border-radius);
 }
 
 pkt-box-arrow-left, .pkt-box-arrow-left {
     @include ui.box-arrow(
         $arrow: "left",
-        $radius: $var.$border-radius);
+        $radius: $border-radius);
 }
 
 button, .button, input[type="button"] {
