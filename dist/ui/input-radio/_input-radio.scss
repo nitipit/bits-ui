@@ -29,9 +29,9 @@
         left: 0;
         width: $width;
         height: $height;
-        background-color: color.adjust(white, $lightness: -30%);
+        background-color: color.adjust(white, $lightness: -20%);
         border-radius: 50%;
-        box-shadow: 0 1px 1px 0 color.adjust(white, $lightness: -30%);
+        box-shadow: 0 1px 1px 0 color.adjust(white, $lightness: -50%);
     }
 
     /* On mouse-over, add a background color */

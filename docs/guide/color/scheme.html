@@ -104,7 +104,19 @@ and monochrome). The default primary color is <span class="pkt-tag">amber</span>
 &lt;pkt-tag class=&quot;bg-p l4&quot;&gt;lighten 4&lt;/pkt-tag&gt;
 </code></pre>
 <h1>Change Primary Color ?</h1>
-<p>The primary color can be changed by using <code>node_modules/packet-ui/src/style/_var.scss</code>.</p>
+<p>The primary color can be changed by creating custom packet-ui.scss</p>
+<pre><code class="language-scss">@use 'style/_var';
+@use 'default' with (
+    $ui-color: var.$ui-color,
+    $border-radius: var.$border-radius
+);
+@use 'typography';
+@use 'ui-class' with (
+    $color: var.$color,
+    $scheme: var.$scheme,
+    $border-radius: var.$border-radius
+)
+</code></pre>
 
 </div>
 

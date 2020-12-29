@@ -28,6 +28,7 @@ async def pillari():
 
 async def packet_ui():
     dest_dir = _docs_dir.joinpath('static/lib/packet-ui')
+    shutil.copytree(_dist_dir, dest_dir, dirs_exist_ok=True)
     async for changes in awatch(_dir.joinpath('dist/')):
         for change, path in changes:
             dest = Path(path).relative_to(_dist_dir)

@@ -59,7 +59,7 @@ div[data-id=preview] pkt-switch.color-p div[el=paddle] {
   text-align: center;
   width: 50%;
   height: 100%;
-  border: 1px solid #9E9E9E;
+  border: 1px solid grey;
   border-radius: 0.2em;
   background-color: white;
   transition: 0.2s;
@@ -123,7 +123,7 @@ div[data-id=preview] pkt-switch.color-a2 div[el=paddle] {
   text-align: center;
   width: 50%;
   height: 100%;
-  border: 1px solid #9E9E9E;
+  border: 1px solid grey;
   border-radius: 0.2em;
   background-color: white;
   transition: 0.2s;

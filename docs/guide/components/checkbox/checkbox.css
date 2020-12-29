@@ -42,7 +42,7 @@
   width: 1em;
   height: 1em;
   background-color: #cccccc;
-  box-shadow: 0 1px 1px 0 #9E9E9E;
+  box-shadow: 0 1px 1px 0 grey;
 }
 .c-p:hover input ~ span {
   background-color: #ffdb6d;
@@ -101,7 +101,7 @@
   width: 1em;
   height: 1em;
   background-color: #cccccc;
-  box-shadow: 0 1px 1px 0 #9E9E9E;
+  box-shadow: 0 1px 1px 0 grey;
 }
 .c-a1:hover input ~ span {
   background-color: #ff926d;
@@ -160,7 +160,7 @@
   width: 1em;
   height: 1em;
   background-color: #cccccc;
-  box-shadow: 0 1px 1px 0 #9E9E9E;
+  box-shadow: 0 1px 1px 0 grey;
 }
 .c-a2:hover input ~ span {
   background-color: #dbff6d;
@@ -219,7 +219,7 @@
   width: 1em;
   height: 1em;
   background-color: #cccccc;
-  box-shadow: 0 1px 1px 0 #9E9E9E;
+  box-shadow: 0 1px 1px 0 grey;
 }
 .c-t1:hover input ~ span {
   background-color: #6ddbff;
@@ -278,7 +278,7 @@
   width: 1em;
   height: 1em;
   background-color: #cccccc;
-  box-shadow: 0 1px 1px 0 #9E9E9E;
+  box-shadow: 0 1px 1px 0 grey;
 }
 .c-t2:hover input ~ span {
   background-color: #926dff;
@@ -337,7 +337,7 @@
   width: 1em;
   height: 1em;
   background-color: #cccccc;
-  box-shadow: 0 1px 1px 0 #9E9E9E;
+  box-shadow: 0 1px 1px 0 grey;
 }
 .c-c:hover input ~ span {
   background-color: #6d92ff;

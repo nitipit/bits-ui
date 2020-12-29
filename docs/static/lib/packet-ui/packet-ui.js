@@ -436,7 +436,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 customElements.define('pkt-checkbox', ui.Checkbox);
 customElements.define('pkt-dotpulse', ui.DotPulse);
-customElements.define('pkt-file', ui.File);
 customElements.define('pkt-input-number', ui.InputNumber);
 customElements.define('pkt-input-radio', ui.InputRadio);
 customElements.define('pkt-input-tag', ui.InputTag);
@@ -458,12 +457,6 @@ Object.defineProperty(exports, "Checkbox", {
   enumerable: true,
   get: function () {
     return _checkbox.Checkbox;
-  }
-});
-Object.defineProperty(exports, "File", {
-  enumerable: true,
-  get: function () {
-    return _file.File;
   }
 });
 Object.defineProperty(exports, "Icon", {
@@ -541,8 +534,6 @@ Object.defineProperty(exports, "TagX", {
 
 var _checkbox = require("./checkbox/checkbox.js");
 
-var _file = require("./file/file.js");
-
 var _icon = require("./icon/icon.js");
 
 var _inputNumber = require("./input-number/input-number.js");
@@ -566,7 +557,7 @@ var _sidebar = require("./sidebar/sidebar.js");
 var _tag = require("./tag/tag.js");
 
 var _tagX = require("./tag/tag-x.js");
-},{"./checkbox/checkbox.js":"59HPo","./file/file.js":"5zyOz","./icon/icon.js":"1D110","./input-number/input-number.js":"4JOAM","./input-radio/input-radio.js":"2A725","./input-tag/input-tag.js":"i8oIg","./menu/menu.js":"22bCq","./progress/dotpulse.js":"2Z5JQ","./progress/progress-bar.js":"4y4nO","./progress/spinner.js":"4f2ox","./switch/switch.js":"V0Zbc","./sidebar/sidebar.js":"620Uu","./tag/tag.js":"2VT62","./tag/tag-x.js":"4Ek1H"}],"59HPo":[function(require,module,exports) {
+},{"./checkbox/checkbox.js":"59HPo","./icon/icon.js":"1D110","./input-number/input-number.js":"4JOAM","./input-radio/input-radio.js":"2A725","./input-tag/input-tag.js":"i8oIg","./menu/menu.js":"22bCq","./progress/dotpulse.js":"2Z5JQ","./progress/progress-bar.js":"4y4nO","./progress/spinner.js":"4f2ox","./switch/switch.js":"V0Zbc","./sidebar/sidebar.js":"620Uu","./tag/tag.js":"2VT62","./tag/tag-x.js":"4Ek1H"}],"59HPo":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2393,42 +2384,7 @@ function templateFactory(result) {
 
 const templateCaches = new Map();
 exports.templateCaches = templateCaches;
-},{"./template.js":"6StAh"}],"5zyOz":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.File = void 0;
-
-var _litHtml = require("lit-html");
-
-class File extends HTMLElement {
-  constructor() {
-    super();
-    let button = this.querySelector('[el="button"]') || (0, _litHtml.html)`<button el="button">File</button>`;
-    let input = this.querySelector('input[type="file"]') || (0, _litHtml.html)`<input type="file" name="file">`;
-    this.template = (0, _litHtml.html)`
-            ${button}
-            ${input}
-        `;
-  }
-
-  render() {
-    (0, _litHtml.render)(this.template, this);
-  }
-
-  connectedCallback() {
-    this.render();
-    this.querySelector('[el="button"]').addEventListener('click', () => {
-      this.querySelector('input[type="file"]').click();
-    });
-  }
-
-}
-
-exports.File = File;
-},{"lit-html":"6UQQ2"}],"1D110":[function(require,module,exports) {
+},{"./template.js":"6StAh"}],"1D110":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3451,7 +3407,7 @@ function zeroArray(arr, length) {
 
 module.exports = Color;
 
-},{"color-string":"3GQOG","color-convert":"1SpBr"}],"3GQOG":[function(require,module,exports) {
+},{"color-string":"74oOM","color-convert":"3DQdk"}],"74oOM":[function(require,module,exports) {
 /* MIT license */
 var colorNames = require('color-name');
 var swizzle = require('simple-swizzle');
@@ -3687,7 +3643,7 @@ function hexDouble(num) {
 	return (str.length < 2) ? '0' + str : str;
 }
 
-},{"color-name":"3NfDk","simple-swizzle":"4DEQB"}],"3NfDk":[function(require,module,exports) {
+},{"color-name":"3pfQs","simple-swizzle":"559is"}],"3pfQs":[function(require,module,exports) {
 'use strict'
 
 module.exports = {
@@ -3841,7 +3797,7 @@ module.exports = {
 	"yellowgreen": [154, 205, 50]
 };
 
-},{}],"4DEQB":[function(require,module,exports) {
+},{}],"559is":[function(require,module,exports) {
 'use strict';
 
 var isArrayish = require('is-arrayish');
@@ -3872,7 +3828,7 @@ swizzle.wrap = function (fn) {
 	};
 };
 
-},{"is-arrayish":"3ZPCR"}],"3ZPCR":[function(require,module,exports) {
+},{"is-arrayish":"70Sx6"}],"70Sx6":[function(require,module,exports) {
 module.exports = function isArrayish(obj) {
 	if (!obj || typeof obj === 'string') {
 		return false;
@@ -3883,7 +3839,7 @@ module.exports = function isArrayish(obj) {
 			(Object.getOwnPropertyDescriptor(obj, (obj.length - 1)) && obj.constructor.name !== 'String')));
 };
 
-},{}],"1SpBr":[function(require,module,exports) {
+},{}],"3DQdk":[function(require,module,exports) {
 var conversions = require('./conversions');
 var route = require('./route');
 
@@ -3963,7 +3919,7 @@ models.forEach(function (fromModel) {
 
 module.exports = convert;
 
-},{"./conversions":"3JyNs","./route":"6Niw0"}],"3JyNs":[function(require,module,exports) {
+},{"./conversions":"2fy34","./route":"27QvR"}],"2fy34":[function(require,module,exports) {
 /* MIT license */
 var cssKeywords = require('color-name');
 
@@ -4833,7 +4789,7 @@ convert.rgb.gray = function (rgb) {
 	return [val / 255 * 100];
 };
 
-},{"color-name":"3NfDk"}],"6Niw0":[function(require,module,exports) {
+},{"color-name":"3pfQs"}],"27QvR":[function(require,module,exports) {
 var conversions = require('./conversions');
 
 /*
@@ -4932,7 +4888,7 @@ module.exports = function (fromModel) {
 };
 
 
-},{"./conversions":"3JyNs"}],"4Ek1H":[function(require,module,exports) {
+},{"./conversions":"2fy34"}],"4Ek1H":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

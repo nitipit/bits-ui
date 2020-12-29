@@ -2,7 +2,7 @@
 @use '../button/_button';
 
 @mixin tab(
-        $button-color: color.adjust(white, $lightness: -20%),
+        $button-color: color.adjust(white, $lightness: -10%),
         $highlight-color: orange) {
 
     display: inline-block;
