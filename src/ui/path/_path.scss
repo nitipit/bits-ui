@@ -10,7 +10,6 @@
     }
 
     li a {
-        color: $color;
         padding: 0 0.3em;
         cursor: pointer;
     }
@@ -18,7 +17,7 @@
         color: $color;
     }
 
-    li:last-of-type a {
+    li.active a {
         color: $color;
     }
 }
