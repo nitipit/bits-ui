@@ -1,10 +1,9 @@
 @use 'sass:color';
-@use '../_var';
 @use '../_mixin';
 
 @mixin tag(
-        $bg-color: var.$ui-color,
-        $radius: var.$border-radius) {
+        $bg-color: orange,
+        $radius: 4px) {
     @include mixin.font-ui();
     @include mixin.bg-color($bg-color);
     display: inline-flex;

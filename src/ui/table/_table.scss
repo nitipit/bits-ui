@@ -1,12 +1,11 @@
 @use 'sass:color';
-@use '../_var';
 @use '../_mixin';
 
 @mixin table(
-        $bg-color: var.$color-p,
+        $bg-color: orange,
         $vertical-line: true,
         $horizontal-line: true,
-        $border-radius: var.$border-radius) {
+        $border-radius: 4px) {
     border-collapse: collapse;
     border-radius: $border-radius;
     thead {

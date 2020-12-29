@@ -56,10 +56,6 @@ pkt-checkbox {
     @include ui.checkbox();
 }
 
-pkt-file {
-    @include ui.file();
-}
-
 input {
     @include ui.input-text();
     &[type="text"], &[type="password"], &[type="email"] {

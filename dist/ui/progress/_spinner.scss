@@ -1,6 +1,4 @@
-@use '../_var';
-
-@mixin spinner($color: var.$ui-color) {
+@mixin spinner($color: orange) {
     display: inline-block;
     color: $color;
     svg {

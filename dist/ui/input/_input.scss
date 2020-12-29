@@ -1,8 +1,7 @@
 @use "sass:color";
-@use '../_var';
 @use '../_mixin';
 
-@mixin slider-thumb($thumb-color: color.adjust(var.$grey, $lightness: 80%)) {
+@mixin slider-thumb($thumb-color: color.adjust(white, $lightness: 80%)) {
     appearance: none;
     width: 1.2em;
     height: 1.2em;
@@ -14,9 +13,9 @@
 }
 
 @mixin slider(
-        $thumb-color: color.adjust(var.$grey, $lightness: 80%),
-        $thumb-color-active: var.$ui-color,
-        $bar-color: color.adjust(var.$grey, $lightness: 50%)) {
+        $thumb-color: color.adjust(white, $lightness: -10%),
+        $thumb-color-active: orange,
+        $bar-color: color.adjust(white, $lightness: -20%)) {
     appearance: none;
     height: 0.2em;
     background-color: $bar-color;
@@ -45,9 +44,9 @@
 
 }
 @mixin input-text(
-        $border-color: var.$grey,
-        $border-radius: var.$border-radius,
-        $outline-color: var.$ui-color) {
+        $border-color: color.adjust(white, $lightness: -20%),
+        $border-radius: 4px,
+        $outline-color: orange) {
     @include mixin.font-ui();
     border: 1px solid $border-color;
     border-radius: $border-radius;

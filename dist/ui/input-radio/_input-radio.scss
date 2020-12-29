@@ -1,8 +1,7 @@
 @use 'sass:color';
-@use '../_var';
 @use '../_mixin';
 
-@mixin input-radio($color: var.$ui-color) {
+@mixin input-radio($color: orange) {
     $width: 1.1em;
     $height: 1.1em;
     position: relative;
@@ -30,14 +29,14 @@
         left: 0;
         width: $width;
         height: $height;
-        background-color: color.adjust(var.$grey, $lightness: 25%);
+        background-color: color.adjust(white, $lightness: -30%);
         border-radius: 50%;
-        box-shadow: 0 1px 1px 0 var.$grey;
+        box-shadow: 0 1px 1px 0 color.adjust(white, $lightness: -30%);
     }
 
     /* On mouse-over, add a background color */
     &:hover input ~ span {
-        background-color: color.adjust($color, $lightness: 20%);
+        background-color: color.adjust(white, $lightness: -20%);
     }
 
     /* When the radio button is checked, add background color */

@@ -1,3 +1,8 @@
-@use 'default';
-@use 'typography';
-@use 'ui-class';
+@use 'style/_var';
+
+@each $name, $value in var {
+    @debug "#{$name} : #{$value}";
+}
+// @use 'default';
+// @use 'typography';
+// @use 'ui-class';

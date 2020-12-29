@@ -1,10 +1,9 @@
 @use 'sass:color';
-@use '../_var';
 @use '../button/_button';
 
 @mixin tab(
-        $button-color: color.adjust(var.$grey, $lightness: 70%),
-        $highlight-color: var.$ui-color) {
+        $button-color: color.adjust(white, $lightness: -20%),
+        $highlight-color: orange) {
 
     display: inline-block;
     position: relative;

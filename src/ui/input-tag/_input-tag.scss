@@ -1,11 +1,9 @@
-@use '../_var';
-
 @mixin input-tag() {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     cursor: text;
-    border: 1px solid var.$grey;
+    border: 1px solid grey;
     border-radius: 4px;
     background: white;
     min-height: 2rem;

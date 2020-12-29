@@ -1,6 +1,4 @@
-@use '../_var';
-
-@mixin path($color: var.$color-p) {
+@mixin path($color: orange) {
     list-style: none;
     padding: 0;
     margin: 0;
