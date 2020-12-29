@@ -20,7 +20,7 @@
 ## Progress Bar
 ---
 <pkt-progress-bar style="margin-top: 2rem;"></pkt-progress-bar>
-<pkt-progress-bar class="a1" value="25%" style="margin-top: 2rem;"></pkt-progress-bar>
+<pkt-progress-bar value="25%" style="margin-top: 2rem;"></pkt-progress-bar>
 
 ### Usage
 ```html

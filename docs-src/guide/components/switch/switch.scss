@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '../../../_var';
 @use '../../../_ui';
 
@@ -9,9 +10,9 @@ div[data-id="preview"] {
         margin: 0.5rem
     }
     pkt-switch.color-p {
-        @include ui.switch(var.$color-p);
+        @include ui.switch(map.get(var.$scheme, color-p));
     }
     pkt-switch.color-a2 {
-        @include ui.switch(var.$color-a2);
+        @include ui.switch(map.get(var.$scheme, color-a2));
     }
 }

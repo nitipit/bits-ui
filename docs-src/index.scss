@@ -1,7 +1,8 @@
+@use 'sass:color';
+@use 'sass:map';
 @use '_ui';
 @use '_mixin';
 @use '_var';
-@use 'sass:color';
 
 #highlight {
     display: flex;
@@ -90,7 +91,7 @@
                 @include mixin.bg-int-color(#eee);
             }
             button:hover {
-                color: var.$color-a1;
+                color: map.get(var.$scheme, color-a1);
             }
         }
     }

@@ -119,27 +119,34 @@ pkt-spinner {
 // end : progress
 
 pkt-sidebar {
-    @include ui.sidebar();
+    @include ui.sidebar($bg-color: $ui-color);
 }
 
 pkt-switch {
-    @include ui.switch();
+    @include ui.switch($color-active: $ui-color);
 }
 
 pkt-tab, .pkt-tab {
-    @include ui.tab();
+    @include ui.tab($highlight-color: $ui-color);
 }
 
 table {
-    @include ui.table();
+    @include ui.table(
+        $bg-color: $ui-color,
+        $border-radius: $border-radius
+    );
 }
 
 pkt-tag, .pkt-tag {
-    @include ui.tag();
+    @include ui.tag(
+        $bg-color: $ui-color,
+        $radius: $border-radius);
 }
 
 pkt-tag-x {
-    @include ui.tag();
+    @include ui.tag(
+        $bg-color: $ui-color,
+        $radius: $border-radius);
     padding-right: 0.2em;
     pkt-icon {
         cursor: pointer;
