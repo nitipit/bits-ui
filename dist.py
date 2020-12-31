@@ -61,11 +61,14 @@ class PacketUI:
         await self._src_copy()
 
     async def _parcel_watch(self):
-        proc = await asyncio.create_subprocess_shell(
-            f"npx parcel watch --dist-dir {self.dist_dir} "
-            f"{self.src_dir.joinpath('packet-ui.js')}")
-        await proc.communicate()
-        proc.terminate()
+        cmd = f"npx parcel watch --dist-dir {self.dist_dir} " +\
+            f"{self.src_dir.joinpath('packet-ui.js')}"
+        print(cmd)
+        # proc = await asyncio.create_subprocess_shell(
+        #     f"npx parcel watch --dist-dir {self.dist_dir} "
+        #     f"{self.src_dir.joinpath('packet-ui.js')}")
+        # await proc.communicate()
+        # proc.terminate()
 
     async def _sass_watch(self):
         proc = await asyncio.create_subprocess_shell(

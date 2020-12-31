@@ -1,17 +1,16 @@
 <html>
 <head>
 
-
 <title>Packet UI</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-
 <link rel="stylesheet" href="../../../static/lib/packet-ui/normalize.css?v=25">
 <link rel="stylesheet" href="../../../static/lib/packet-ui/packet-ui.css?v=25">
-<link icon rel="preload" set="adwaita" href="../../../static/lib/adwaita-icon-web/adwaita.svg?v=25" as="image"
-    type="image/svg+xml">
-<link icon rel="preload" set="brand" href="../../../static/asset/icon/brand/symbol-defs.svg?v=25" as="image"
-    type="image/svg+xml">
+<link icon rel="preload" set="adwaita"
+    href="../../../static/lib/adwaita-icon-web/adwaita.svg?v=25"
+    as="image" type="image/svg+xml">
+<link icon rel="preload" set="brand"
+    href="../../../static/asset/icon/brand/symbol-defs.svg?v=25"
+    as="image" type="image/svg+xml">
 <link rel="stylesheet" href="../../../static/lib/highlight.js/atom-one-dark.css?v=25">
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -23,7 +22,13 @@
     gtag('config', 'UA-36104934-6');
 </script>
 <!-- End Google Analytics -->
+
+<script type="module">
+import { Icon } from '../../../static/lib/adwaita-icon-web/icon.js';
+customElements.define('pkt-icon', Icon);  // define custom element for icons
+</script>
 <link rel="stylesheet" href="../../../base.css?v=25">
+
 <script defer src="../../../base.js"></script>
 
 
@@ -42,44 +47,13 @@
 
 <div class="container">
 <h1>Icon</h1>
-<h2>Preview</h2>
-<hr />
-<div id="preview">
-    <pkt-icon class="size-1 red" set="adwaita" name="airplane-mode"></pkt-icon>
-    <pkt-icon class="size-2 purple" set="adwaita" name="call-start"></pkt-icon>
-    <pkt-icon class="size-3" set="adwaita" name="contact-new"></pkt-icon>
-    <pkt-icon class="size-2 blue" set="adwaita" name="find-location"></pkt-icon>
-    <pkt-icon class="size-1 green" set="adwaita" name="go-home"></pkt-icon>
-</div>
-<p>Packet UI provides icon set from <a href="https://nitipit.github.io/adwaita-icon-web/">adwaita-icon-web</a>.</p>
-<h2>Usage</h2>
-<hr />
-<p>Before using, we need to load <strong>adwaita.svg</strong> in <code>&lt;head&gt;</code> section.</p>
-<blockquote>
-<p><pkt-icon set="adwaita" name="dialog-information"></pkt-icon> <code>adwaita.svg</code> is included in Packet UI distribution.</p>
-</blockquote>
-<pre><code class="language-html">&lt;head&gt;
-&lt;link icon
-    rel=&quot;preload&quot;
-    set=&quot;adwaita&quot;
-    href=&quot;/path/to/packet-ui/adwaita-icon-web/adwaita.svg&quot;
-    as=&quot;image&quot; type=&quot;image/svg+xml&quot;&gt;
-&lt;/head&gt;
-</code></pre>
-<p>Then we can use <code>&lt;pkt-icon&gt;</code> by specify icon set and icon name.
-Furthermore, color and size can be applied by using css property: <code>color</code> &amp; <code>font-size</code> as following example.</p>
-<pre><code class="language-html">&lt;pkt-icon set=&quot;adwaita&quot; name=&quot;airplane-mode&quot;&gt;&lt;/pkt-icon&gt;
-
-&lt;!-- with color and size --&gt;
-&lt;pkt-icon set=&quot;adwaita&quot; name=&quot;system-shutdown&quot;
-    style=&quot;color: red; font-size: 4rem;&quot;&gt;&lt;/pkt-icon&gt;
-
-&lt;!-- using predefined color CSS class --&gt;
-&lt;pkt-icon set=&quot;adwaita&quot; name=&quot;mark-location&quot;
-    class=&quot;red&quot; style=&quot;font-size: 4rem;&quot;&gt;&lt;/pkt-icon&gt;
-</code></pre>
-<p><pkt-icon set="adwaita" name="system-shutdown" style="color: red; font-size: 4rem;"></pkt-icon>
-<pkt-icon set="adwaita" name="mark-location" class="red" style="font-size: 4rem;"></pkt-icon></p>
+<p>Packet UI doesn't include icon pack with it's distribution since there're a lot of icon packs for developer to choose already.<br />
+These are some recommendations.</p>
+<ul>
+<li><a href="https://nitipit.github.io/adwaita-icon-web/">Adwaita Icon Web</a> : This is the icons set we use on <strong>Packet UI</strong> website.</li>
+<li><a href="https://fontawesome.com/">Font Awesome</a> : The most popular icon pack.</li>
+<li><a href="https://icomoon.io/">IcoMoon</a> : Font &amp; SVG icons which provides great tools to generate custom icons.</li>
+</ul>
 
 </div>
 

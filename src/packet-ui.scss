@@ -1,3 +1,12 @@
-@use 'default';
-@use 'typography';
-@use 'ui-class';
+@use 'sass:map';
+@use 'style/_var';
+@use '_typography';
+@use '_components' with (
+    $ui-color: var.$ui-color,
+    $border-radius: var.$border-radius
+);
+@use '_ui-class' with (
+    $pallete: var.$pallete,
+    $scheme: var.$scheme,
+    $border-radius: var.$border-radius
+);

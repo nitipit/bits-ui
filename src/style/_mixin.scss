@@ -1,5 +1,4 @@
 @use "sass:color";
-@use "_var";
 
 @function darkshade($color) {
     @if (color.hue($color) >= 30deg) and (color.hue($color) <= 200deg) {
@@ -26,7 +25,7 @@
     }
 }
 
-@mixin bg-int-color($bg-color: var.$color-p) {
+@mixin bg-int-color($bg-color: orange) {
     @include bg-color($bg-color);
     &:hover {
         background-color: color.adjust($bg-color,
@@ -38,22 +37,22 @@
     }
 }
 
-@mixin border-top-radius($radius: var.$border-radius) {
+@mixin border-top-radius($radius: 4px) {
     border-top-left-radius: $radius;
     border-top-right-radius: $radius;
 }
 
-@mixin border-right-radius($radius: var.$border-radius) {
+@mixin border-right-radius($radius: 4px) {
     border-top-right-radius: $radius;
     border-bottom-right-radius: $radius;
 }
 
-@mixin border-bottom-radius($radius: var.$border-radius) {
+@mixin border-bottom-radius($radius: 4px) {
     border-bottom-right-radius: $radius;
     border-bottom-left-radius: $radius;
 }
 
-@mixin border-left-radius($radius: var.$border-radius) {
+@mixin border-left-radius($radius: 4px) {
     border-top-left-radius: $radius;
     border-bottom-left-radius: $radius;
 }

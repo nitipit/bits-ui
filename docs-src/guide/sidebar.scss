@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '../_var';
 @use '../mixin';
 
@@ -27,7 +28,7 @@ pkt-sidebar {
         pkt-button-square {
             font-size: 1.5rem;
             border-radius: 0;
-            @include mixin.bg-int-color(var.$color-c);
+            @include mixin.bg-int-color(map.get(var.$scheme, color-c));
         }
     }
     [el="content"] {

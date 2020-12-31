@@ -1,7 +1,6 @@
-@use '../_var';
 @use '../_mixin';
 
-@mixin card($radius: var.$border-radius) {
+@mixin card($radius: 4px) {
     display: block;
     border-radius: $radius;
     @include mixin.lift-3();

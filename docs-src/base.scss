@@ -1,6 +1,7 @@
 @use '_var';
 @use '_mixin';
 @use 'sass:color';
+@use 'sass:map';
 
 @font-face {
     font-family: 'fira-sans';
@@ -61,12 +62,14 @@ code.hljs {
 }
 
 blockquote {
-    background: color.adjust(var.$color-p, $lightness: 35%);
+    background: color.adjust(
+        map.get(var.$scheme, color-p), $lightness: 35%
+    );
     p {
         padding-top: 0.75rem;
         padding-bottom: 0.75rem;
     }
     pkt-icon {
-        color: var.$color-a1;
+        color: map.get(var.$scheme, color-a1);
     }
 }

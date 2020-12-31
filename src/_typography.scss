@@ -1,7 +1,5 @@
-@use "style/_var";
-@use "style/_mixin";
 @use "sass:color";
-
+@use "style/_mixin";
 
 html {
     @include mixin.font-fluid();
@@ -23,7 +21,7 @@ blockquote {
     box-sizing: border-box;
     padding-left: 1rem;
     padding-right: 1rem;
-    border-left: 4px solid var.$color-p;
+    border-left: 4px solid orange;
 }
 
 code {

@@ -1,5 +1,4 @@
 @use 'sass:color';
-@use '../_var';
 @use '../_mixin';
 
 @mixin box-arrow(
@@ -9,7 +8,7 @@
         $bg-color: color.adjust(white, $lightness: -20%),
         $border-width: 1px,
         $border-color: black,
-        $radius: var.$border-radius) {
+        $radius: 4px) {
     display: block;
     list-style: none;
     border: $border-width solid $border-color;

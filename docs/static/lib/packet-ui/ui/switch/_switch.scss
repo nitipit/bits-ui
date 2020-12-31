@@ -1,8 +1,7 @@
 @use 'sass:color';
-@use '../_var';
 @use '../_mixin';
 
-@mixin switch($color-active: var.$ui-color) {
+@mixin switch($color-active: orange) {
     @include mixin.font-ui();
     display: inline-flex;
     font-weight: bold;
@@ -60,7 +59,7 @@
         text-align: center;
         width: 50%;
         height: 100%;
-        border: 1px solid var.$grey;
+        border: 1px solid grey;
         border-radius: 0.2em;
         background-color: white;
         transition: .2s;

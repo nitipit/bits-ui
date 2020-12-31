@@ -1,6 +1,4 @@
-@use '../_var';
-
-@mixin path($color: var.$color-p) {
+@mixin path($color: orange) {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -12,7 +10,6 @@
     }
 
     li a {
-        color: $color;
         padding: 0 0.3em;
         cursor: pointer;
     }
@@ -20,7 +17,7 @@
         color: $color;
     }
 
-    li:last-of-type a {
+    li.active a {
         color: $color;
     }
 }

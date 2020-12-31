@@ -1,7 +1,6 @@
 @use 'sass:color';
-@use '../_var';
 
-@mixin progress-bar($color: var.$ui-color) {
+@mixin progress-bar($color: orange) {
     position: relative;
     height: 0.25em;
     display: block;

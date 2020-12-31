@@ -1,7 +1,6 @@
-@use '../_var';
 @use '../_mixin';
 
-@mixin button-group-border($radius: var.$border-radius) {
+@mixin button-group-border($radius: 4px) {
     border-radius: 0;
     &:first-of-type {
         @include mixin.border-right-radius(0);
@@ -13,7 +12,7 @@
     }
 }
 
-@mixin button-group($radius: var.$border-radius) {
+@mixin button-group($radius: 4px) {
     display: flex;
     > button, > .button {
         width: 100%;

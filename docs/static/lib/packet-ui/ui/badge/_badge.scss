@@ -1,7 +1,6 @@
-@use '../_var';
 @use '../_mixin';
 
-@mixin badge($bg-color: var.$ui-color) {
+@mixin badge($bg-color: orange) {
     @include mixin.font-ui();
     @include mixin.bg-color($bg-color);
     display: inline-flex;

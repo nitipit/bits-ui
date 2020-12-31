@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '../../../var';
 @use '../../../ui';
 
@@ -13,22 +14,26 @@
         &.top {
             @include ui.box-arrow(
                 $arrow: top,
-                $bg-color: var.$color-a1);
+                $bg-color: map.get(var.$scheme, color-a1)
+            );
         };
         &.right {
             @include ui.box-arrow(
                 $arrow: right,
-                $bg-color: var.$color-p);
+                $bg-color: map.get(var.$scheme, color-p)
+            );
         };
         &.bottom {
             @include ui.box-arrow(
                 $arrow: bottom,
-                $bg-color: var.$color-a2);
+                $bg-color: map.get(var.$scheme, color-a2)
+            );
         }
         &.left {
             @include ui.box-arrow(
                 $arrow: left,
-                $bg-color: var.$color-t1);
+                $bg-color: map.get(var.$scheme, color-t1)
+            );
         }
     }
     p.pkt-box-arrow.top {

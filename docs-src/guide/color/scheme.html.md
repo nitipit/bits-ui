@@ -71,4 +71,18 @@ Monochrome for primary color):
 ```
 
 # Change Primary Color ?
-The primary color can be changed by using `node_modules/packet-ui/src/style/_var.scss`.
+The primary color can be changed by creating custom packet-ui.scss
+
+```scss
+@use 'style/_var';
+@use 'default' with (
+    $ui-color: var.$ui-color,
+    $border-radius: var.$border-radius
+);
+@use 'typography';
+@use 'ui-class' with (
+    $color: var.$color,
+    $scheme: var.$scheme,
+    $border-radius: var.$border-radius
+)
+```

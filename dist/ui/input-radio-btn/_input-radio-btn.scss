@@ -1,9 +1,8 @@
 @use 'sass:color';
-@use '../_var';
 @use '../_mixin';
 @use '../button/_button';
 
-@mixin input-radio-btn($color: var.$ui-color) {
+@mixin input-radio-btn($color: orange) {
     display: inline-block;
     position: relative;
     font-size: 1em;

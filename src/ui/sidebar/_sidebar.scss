@@ -1,7 +1,6 @@
-@use '../_var';
 @use '../_mixin';
 
-@mixin sidebar($bg-color: var.$color-p) {
+@mixin sidebar($bg-color: orange) {
     position: absolute;
     top: 0;
     [el="wrapper"] {

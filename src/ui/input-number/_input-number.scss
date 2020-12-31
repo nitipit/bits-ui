@@ -1,7 +1,6 @@
-@use '../_var';
 @use '../_mixin';
 
-@mixin input-number($bg-color: var.$ui-color) {
+@mixin input-number($bg-color: orange) {
     display: flex;
     input[type="number"] {
         &::-webkit-inner-spin-button {

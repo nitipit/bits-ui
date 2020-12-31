@@ -1,6 +1,4 @@
-@use '../_var';
-
-@mixin dotpulse($color: var.$ui-color) {
+@mixin dotpulse($color: orange) {
     min-width: 3.5em;
     div {
         width: 1em;

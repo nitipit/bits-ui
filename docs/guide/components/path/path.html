@@ -1,17 +1,16 @@
 <html>
 <head>
 
-
 <title>Packet UI</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-
 <link rel="stylesheet" href="../../../static/lib/packet-ui/normalize.css?v=25">
 <link rel="stylesheet" href="../../../static/lib/packet-ui/packet-ui.css?v=25">
-<link icon rel="preload" set="adwaita" href="../../../static/lib/adwaita-icon-web/adwaita.svg?v=25" as="image"
-    type="image/svg+xml">
-<link icon rel="preload" set="brand" href="../../../static/asset/icon/brand/symbol-defs.svg?v=25" as="image"
-    type="image/svg+xml">
+<link icon rel="preload" set="adwaita"
+    href="../../../static/lib/adwaita-icon-web/adwaita.svg?v=25"
+    as="image" type="image/svg+xml">
+<link icon rel="preload" set="brand"
+    href="../../../static/asset/icon/brand/symbol-defs.svg?v=25"
+    as="image" type="image/svg+xml">
 <link rel="stylesheet" href="../../../static/lib/highlight.js/atom-one-dark.css?v=25">
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -23,7 +22,13 @@
     gtag('config', 'UA-36104934-6');
 </script>
 <!-- End Google Analytics -->
+
+<script type="module">
+import { Icon } from '../../../static/lib/adwaita-icon-web/icon.js';
+customElements.define('pkt-icon', Icon);  // define custom element for icons
+</script>
 <link rel="stylesheet" href="../../../base.css?v=25">
+
 <script defer src="../../../base.js"></script>
 
 
@@ -45,16 +50,16 @@
 <hr />
 <ul class="pkt-path" style="font-size: 2rem;
         text-align: center; margin-top: 2rem;">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li class="active"><a href="#">3</a></li>
 </ul>
 <h2>Usage</h2>
 <hr />
 <pre><code class="language-html">&lt;ul class=&quot;pkt-path&quot;&gt;
-    &lt;li&gt;1&lt;/li&gt;
-    &lt;li&gt;2&lt;/li&gt;
-    &lt;li&gt;3&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
 
