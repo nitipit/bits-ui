@@ -6,12 +6,12 @@ To use default style and color, just put codes below in html `<head>` and you're
 <head>
     <!-- Load default CSS -->
     <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/packet-ui@1.0.0/dist/normalize.css">
+        href="https://cdn.jsdelivr.net/npm/packet-ui@1.0.2/dist/normalize.css">
     <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/packet-ui@1.0.0/dist/packet-ui.css">
+        href="https://cdn.jsdelivr.net/npm/packet-ui@1.0.2/dist/packet-ui.css">
 
     <!-- Load packet-ui.js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/packet-ui@1.0.0/dist/packet-ui.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/packet-ui@1.0.2/dist/packet-ui.js"></script>
 
     <!-- Set up font for UI components. Cantarell is recommended -->
     <style>
