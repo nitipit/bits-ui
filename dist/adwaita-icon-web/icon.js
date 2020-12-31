@@ -1,10 +1,12 @@
 class Icon extends HTMLElement {
     constructor() {
-        super()
-        this.set = this.getAttribute('set')
-        this.name = this.getAttribute('name')
+        super();
     };
     connectedCallback() {
+        // Must set element properties after it's been attached to DOM.
+        this.set = this.getAttribute('set');
+        this.name = this.getAttribute('name');
+
         let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         let link = null;
         try {
@@ -24,6 +26,7 @@ class Icon extends HTMLElement {
         svg.style.width = '1em';
         svg.style.height = '1em';
         svg.appendChild(use);
+        this.innerHTML = '';
         this.appendChild(svg);
     };
 };

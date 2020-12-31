@@ -1,5 +1,4 @@
 export {Checkbox} from './checkbox/checkbox.js';
-export {Icon} from './icon/icon.js';
 export {InputNumber} from './input-number/input-number.js';
 export {InputRadio} from './input-radio/input-radio.js';
 export {InputTag} from './input-tag/input-tag.js';

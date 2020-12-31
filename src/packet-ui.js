@@ -12,4 +12,3 @@ customElements.define('pkt-sidebar', ui.Sidebar);
 customElements.define('pkt-switch', ui.Switch);
 customElements.define('pkt-tag', ui.Tag);
 customElements.define('pkt-tag-x', ui.TagX);
-customElements.define('pkt-icon', ui.Icon);
