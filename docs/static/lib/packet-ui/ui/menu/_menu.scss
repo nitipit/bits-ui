@@ -38,8 +38,9 @@
         cursor: pointer;
         padding: 0.4em 1em;
         i.caret {
+            font-size: 1.1em;
             transition: transform 0.2s;
-            margin-top: 0.55em;
+            margin-top: 0.6em;
             margin-right: 0.2em;
         }
     }
