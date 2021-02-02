@@ -5,23 +5,30 @@
 @use '_var';
 
 #highlight {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 40vh;
-    align-content: center;
-    justify-content: center;
-
-    pkt-tag {
-        h1 {
-            line-height: 1;
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        pkt-tag {
+            h1 {
+                line-height: 1;
+                margin: 0.5rem;
+            }
+        }
+        h2 {
+            @media #{var.$sm} {
+                font-size: 1.3em;
+            }
+        }
+        a.button {
             margin: 0.5rem;
         }
-    }
-    a.button {
-        margin: 0.5rem;
-    }
-    a[el="github"] {
-        @include ui.button($bg-color: color.adjust(white, $lightness: -10%));
+        a[el="github"] {
+            @include ui.button($bg-color: color.adjust(white, $lightness: -10%));
+        }
     }
 }
 

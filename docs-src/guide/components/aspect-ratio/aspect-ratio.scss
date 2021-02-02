@@ -1,0 +1,25 @@
+@use '../../../var';
+
+#preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eee;
+        width: 80%;
+        max-width: 250px;
+        border: 1px solid;
+        margin: 2rem;
+        font-size: 2rem;
+        @media #{var.$sm} {
+            margin: 1rem;
+        }
+    }
+    .video {
+        width: 100%;
+    }
+}

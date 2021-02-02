@@ -1,5 +1,7 @@
 @use 'style/_mixin';
 @use "ui/_ui";
+@use 'ui/aspect-ratio/aspect-ratio.scss';
+
 
 $ui-color: orange !default;
 $border-radius: 4px !default;

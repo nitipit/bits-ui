@@ -37,61 +37,36 @@ customElements.define('pkt-icon', Icon);  // define custom element for icons
 <link rel="stylesheet" href="../../../guide/base.css?v=25">
 <link rel="stylesheet" href="../../../guide/sidebar.css?v=25">
 
-<link rel="stylesheet" href="../../../guide/components/tag/tag.css?v=25">
+<link rel="stylesheet" href="../../../guide/components/aspect-ratio/aspect-ratio.css?v=25">
 
 </head>
 <body>
 
-
-
 <div class="container">
-<h1>Tag</h1>
+<h1>Aspect Ratio</h1>
+<p>Aspect Ratio Box is essential for multimedia such as videos, movies or
+card like contents.</p>
+<p>Refer to <a href="https://css-tricks.com/aspect-ratio-boxes/">https://css-tricks.com/aspect-ratio-boxes/</a></p>
 <h2>Preview</h2>
 <hr />
-<div class="preview-tag" style="display: flex; justify-content: center;">
-    <pkt-tag class="bg-a1">tag</pkt-tag>
-    <pkt-tag>tag</pkt-tag>
-    <pkt-tag class="bg-a2">tag</pkt-tag>
-    <pkt-tag class="bg-t1">tag</pkt-tag>
-    <pkt-tag class="bg-c">tag</pkt-tag>
-    <pkt-tag class="bg-t2">tag</pkt-tag>
+<div id="preview">
+    <div class="box" style="--aspect-ratio:1;">1:1</div>
+    <div class="box" style="--aspect-ratio:4/3;">4:3</div>
+    <div class="box" style="--aspect-ratio:16/9;">16:9</div>
+    <div class="box" style="--aspect-ratio:21/9;">21:9</div>
+</div>
+<h2>Use Case</h2>
+<hr />
+<p>Responsive video with <code>21:9</code> aspect ratio ? ;)</p>
+<div class="video" style="--aspect-ratio:21/9;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/WhWc3b3KhnY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <h2>Usage</h2>
 <hr />
-<pre><code class="language-html">&lt;pkt-tag&gt;tag&lt;/pkt-tag&gt;
-</code></pre>
-<h2>SCSS</h2>
-<pre><code class="language-scss">@use 'path/to/_ui.scss';
-
-pkt-tag {
-    @include ui.tag(
-        $bg-color: orange,
-        $radius: 4px);
-}
-</code></pre>
-<h1>Tag-X</h1>
-<h2>Preview</h2>
-<hr />
-<div class="preview-tag" style="display: flex; justify-content: center;">
-    <pkt-tag-x class="bg-a1">one</pkt-tag-x>
-    <pkt-tag-x class="bg-p">two</pkt-tag-x>
-    <pkt-tag-x class="bg-a2">three</pkt-tag-x>
-    <pkt-tag-x class="bg-t1">four</pkt-tag-x>
-    <pkt-tag-x class="bg-c">five</pkt-tag-x>
-    <pkt-tag-x class="bg-t2">six</pkt-tag-x>
-</div>
-<h2>Usage</h2>
-<hr />
-<pre><code class="language-html">&lt;pkt-tag-x&gt;tag&lt;/pkt-tag-x&gt;
-</code></pre>
-<h2>SCSS</h2>
-<hr />
-<pre><code class="language-scss">@use 'path/to/_ui.scss';
-
-pkt-tag {
-    @include ui.tag(
-        $bg-color: orange,
-        $radius: 4px)
+<pre><code class="language-html">&lt;div style=&quot;--aspect-ratio:1;&quot;&gt;1:1&lt;/div&gt;
+&lt;div style=&quot;--aspect-ratio:4/3;&quot;&gt;4:3&lt;/div&gt;
+&lt;div style=&quot;--aspect-ratio:16/9;&quot;&gt;16:9&lt;/div&gt;
+&lt;div style=&quot;--aspect-ratio:21/9;&quot;&gt;21:9&lt;/div&gt;
 </code></pre>
 
 </div>

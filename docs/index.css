@@ -1,21 +1,27 @@
 /* Small Screen */
 /* Medium Screen */
 /* Large Screen */
-#highlight {
+#highlight .container {
   display: flex;
   flex-wrap: wrap;
-  min-height: 40vh;
   align-content: center;
   justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
-#highlight pkt-tag h1 {
+#highlight .container pkt-tag h1 {
   line-height: 1;
   margin: 0.5rem;
 }
-#highlight a.button {
+@media screen and (max-width: 39.9375em) {
+  #highlight .container h2 {
+    font-size: 1.3em;
+  }
+}
+#highlight .container a.button {
   margin: 0.5rem;
 }
-#highlight a[el=github] {
+#highlight .container a[el=github] {
   font-family: packet-ui;
   font-size: 1em;
   box-shadow: 0 1px 3px 0 #404040;
@@ -37,22 +43,22 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-#highlight a[el=github]:hover {
+#highlight .container a[el=github]:hover {
   background-color: white;
 }
-#highlight a[el=github]:active {
+#highlight .container a[el=github]:active {
   background-color: #cccccc;
 }
-#highlight a[el=github]:hover {
+#highlight .container a[el=github]:hover {
   box-shadow: 0 2px 5px 0 #404040;
 }
-#highlight a[el=github]:active {
+#highlight .container a[el=github]:active {
   box-shadow: 0 1px 3px 0 #404040;
 }
-#highlight a[el=github][disabled]:hover {
+#highlight .container a[el=github][disabled]:hover {
   cursor: not-allowed;
 }
-#highlight a[el=github] a {
+#highlight .container a[el=github] a {
   text-decoration: none;
 }
 

@@ -1,0 +1,14 @@
+{% extends 'guide/_base.html' %}
+
+{% set to_root = '../../../' %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{to_root}}guide/components/aspect-ratio/aspect-ratio.css?v={{_v}}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+{{ markdown('aspect-ratio.html.md') }}
+</div>
+{% endblock %}
