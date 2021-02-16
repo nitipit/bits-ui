@@ -1,7 +1,7 @@
 {
     "name": "packet-ui",
-    "version": "1.1.0",
-    "description": "Simple and elegant HTML5 UI with Javascript and CSS",
+    "version": "1.1.1",
+    "description": "Simple and Stylish <Web Components/> User Interface",
     "repository": "git@github.com:nitipit/packet-ui.git",
     "author": "Nitipit Nontasuwan <nitipit@gmail.com>",
     "license": "MIT",

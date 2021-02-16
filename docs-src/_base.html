@@ -1,11 +1,12 @@
 <html>
 <head>
-{% set _v = 25 %}
+{% set _v = 26 %}
 {% block title %}<title>Packet UI</title>{% endblock %}
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 {% include '_lib.html' %}
 <link rel="stylesheet" href="{{to_root}}base.css?v={{_v}}">
 
+<script defer src="{{to_root}}static/lib/packet-ui/packet-ui.js?v={{_v}}"></script>
 <script defer src="{{to_root}}base.js"></script>
 {% block head %}
 {% endblock %}
