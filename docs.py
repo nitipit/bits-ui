@@ -20,8 +20,8 @@ def lib():
         dirs_exist_ok=True)
 
 
-async def pillari():
-    proc = await asyncio.create_subprocess_shell('pillari dev docs-src docs')
+async def engrave():
+    proc = await asyncio.create_subprocess_shell('engrave dev docs-src docs')
     await proc.communicate()
     proc.terminate()
 
@@ -45,7 +45,7 @@ async def packet_ui():
 async def main():
     lib()
     await asyncio.gather(
-        pillari(),
+        engrave(),
         packet_ui(),
     )
 

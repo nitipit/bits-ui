@@ -1,4 +1,4 @@
 Jinja2==2.11.2
-mistune==2.0.0a5
+mistune==2.0.0rc1
 watchgod==0.6
-pillari==1.0.0
+engrave==1.0.2

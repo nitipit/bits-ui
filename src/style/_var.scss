@@ -63,9 +63,13 @@ $scheme: (
         $hue: 180 + ($hue-distance),
         $saturation: $saturate));
 
-$scheme: map.merge($scheme, (color-p: map.get($scheme, color-primary),
+$scheme: map.merge(
+    $scheme, (
+        color-p: map.get($scheme, color-primary),
         color-c: map.get($scheme, color-complement),
         color-a1: map.get($scheme, color-analog-left),
         color-a2: map.get($scheme, color-analog-right),
         color-t1: map.get($scheme, color-triadic-left),
-        color-t2: map.get($scheme, color-triadic-right)));
+        color-t2: map.get($scheme, color-triadic-right)
+    )
+);
